@@ -1,3 +1,10 @@
+// TODO: Video cant autoplay on safari, for now workaround just play if browser not safari..
+// Find a better way of doing this.
+if (navigator.vendor == "Apple Computer, Inc.") {
+  $("#myVideo").remove();
+  $("#video-poster").css('display', 'inline-block');
+  
+}
 document.addEventListener('DOMContentLoaded', function () {
   // Guessing Game
   let randomNumber; // Declare vars

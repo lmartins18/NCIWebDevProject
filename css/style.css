@@ -1,5 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+/* test */
+header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video,
+header #video-poster {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+header #video-poster {
+  display: none;
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* Media Query for devices withi coarse pointers and no hover functionality */
+
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+
+@media (pointer: coarse) and (hover: none) {
+  header video {
+    display: none;
+  }
+}
+
+/* end test */
 html,
 body {
   width: 100%;
@@ -25,7 +73,9 @@ picture {
   background: linear-gradient(120deg, black, gray);
   background-size: 200% 200%;
   animation: gradientFade 5s ease-in-out infinite;
-
+  /* color */
+  --nyanza: #E9FFDB ;
+  --dark-purple: #301934;
   /* margins and padding */
   --margin-xxs: 0.2rem;
   --margin-xs: 0.4rem;
@@ -108,16 +158,17 @@ header.NCI-GYM {
   background-size: 200% 200%;
   animation: gradientFade 5s ease-in-out infinite;
 }
-nav.head-navigation {
-  z-index: 100;
+.backdrop-filter {
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
-  width: 100%;
-  position: fixed;
+}
+nav.head-navigation {
   background-color: linear-gradient(120deg, black, gray);
-  display: flex;
-  align-items: center;
-  padding: 2rem 4rem;
+  z-index: 100;
+}
+
+nav.head-navigation * {
+  color: white !important;
 }
 
 nav.head-navigation .site-logo {
@@ -125,7 +176,9 @@ nav.head-navigation .site-logo {
   font-size: 2rem;
   text-transform: uppercase;
 }
-
+nav.head-navigation .site-logo:hover {
+  text-decoration: none;
+}
 nav.head-navigation ul {
   margin-left: auto;
 }
@@ -151,17 +204,6 @@ nav.head-navigation ul li a:hover {
   transition: 0.3s;
 }
 
-.video-container {
-  height: 100%;
-  width: 100%;
-}
-
-.video-container video {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  object-fit: cover;
-}
 .NCI-GYM-container {
   opacity: 1;
   animation: 2s ease-out 0s 1 slideInBelow;
@@ -199,11 +241,16 @@ nav.head-navigation ul li a:hover {
   color: var(--nyanza);
   border: 1px solid white;
   padding: 0.6em 1.4em;
+  transition: transform 0.5s;
 }
 
 .NCI-GYM-container__book-button:hover {
+  color: var(--nyanza);
   background-color: var(--dark-purple);
   transition: background-color ease-in-out 0.3s;
+  text-decoration: none;
+  transform: scale(1.06);
+  transition: transform 0.5s;
 }
 
 /*  sections  */
@@ -229,7 +276,7 @@ section {
 
 .dark {
   background-color: var(--dark-purple);
-  color: var(--nyanza);
+  color: var(--nyanza) !important;
 }
 
 .light {

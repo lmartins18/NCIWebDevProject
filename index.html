@@ -1,175 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>National College of Ireland Gym</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="script/script.js" defer></script>
-</head>
-<body>
-  <div class="video-container">
-    <video autoplay muted loop id="myVideo">
-      <source src="./videos/pexels-tima-miroshnichenko-6389061 (2160p).mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <header class="NCI-GYM">
-    <nav class="head-navigation">
-      <a href="#" class="site-logo">NCI GYM</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>National College of Ireland Gym</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- End of bootstrap -->
+  </head>
+  <body>
+    <header class="NCI-GYM position-re">
+      <video
+        muted
+        playsinline
+        autoplay
+        id="myVideo"
+        poster="./images/video-poster.jpg"
+      >
+        <source
+          src="./videos/pexels-tima-miroshnichenko-6389061 (2160p).mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <img
+        id="video-poster"
+        src="./images/video-poster.jpg"
+        alt="header background dumbbells"
+      />
+      <!-- Customize bootstrap and add z-index -->
+      <nav
+        class="head-navigation w-100 position-fixed d-flex align-items-center p-4 backdrop-filter"
+      >
+        <a href="#" class="site-logo link-light">NCI GYM</a>
         <ul>
           <li><a href="Pages/Register.html">Register</a></li>
           <li><a href="Pages/about.html">About</a></li>
           <li><a href="Pages/subscription.html">Subscription</a></li>
         </ul>
-    </nav>
-    <div class="NCI-GYM-container">
-      <h1 class="NCI-GYM-container__title text_center">NCI GYM</h1>
-      <p class="NCI-GYM-container__subtitle text_center">National College of Ireland's best gym
-      </p>
-      <a class="NCI-GYM-container__book-button" href="./Pages/Register.html">Register Now</a>
-    </div>
-  </header>
-  </div>
-  
-  <main>
-  <script src="script.js" defer></script>
-    <section class="dark">
-      <div class="upcoming-classes-container">
-        <div class="section-header dark">
-          <h2 class="section-header__title">Upcoming Classes</h2>
-          <p class="section-header__subtitle">When and where activities are booked</p>
+      </nav>
+      <div class="NCI-GYM-container">
+        <h1 class="NCI-GYM-container__title text_center">NCI GYM</h1>
+        <p class="NCI-GYM-container__subtitle text_center">
+          National College of Ireland's best gym
+        </p>
+        <a class="NCI-GYM-container__book-button " href="./Pages/Register.html"
+          >Register Now</a
+        >
+      </div>
+    </header>
+    <main>
+      <section class="dark">
+        <div class="upcoming-classes-container">
+          <div class="section-header dark">
+            <h2 class="section-header__title">Upcoming Classes</h2>
+            <p class="section-header__subtitle">
+              When and where activities are booked
+            </p>
+          </div>
+          <div class="table-container">
+            <table class="upcoming-classes-table">
+              <tr>
+                <th>Date</th>
+                <th>Activity</th>
+                <th>Room</th>
+                <th>Price</th>
+              </tr>
+              <tr>
+                <td>1/12/2023</td>
+                <td>Body Sculpt</td>
+                <td>CrossFit Citadel</td>
+                <td>35 Euros</td>
+              </tr>
+              <tr>
+                <td>2/12/2023</td>
+                <td>Gold-&-Tone</td>
+                <td>Muscle Oasis</td>
+                <td>37 Euros</td>
+              </tr>
+              <tr>
+                <td>2/12/2023</td>
+                <td>HIIT</td>
+                <td>Aerobic Arena</td>
+                <td>22 Euros</td>
+              </tr>
+              <tr>
+                <td>3/12/2023</td>
+                <td>ICG Spin (Standard)</td>
+                <td>Zenith Zone</td>
+                <td>50 Euros</td>
+              </tr>
+              <tr>
+                <td>3/12/2023</td>
+                <td>TRX</td>
+                <td>Body Blitz Chamber</td>
+                <td>50 Euros</td>
+              </tr>
+            </table>
+          </div>
+          <p class="note">Note: Refer to map in main loby if needed</p>
         </div>
-        <div class="table-container">
-          <table class="upcoming-classes-table">
-            <tr>
-              <th>Date</th>
-              <th>Activity</th>
-              <th>Room</th>
-              <th>Price</th>
-            </tr>
-            <tr>
-              <td>1/12/2023</td>
-              <td>Body Sculpt</td>
-              <td>CrossFit Citadel</td>
-              <td>35 Euros</td>
-            </tr>
-            <tr>
-              <td>2/12/2023</td>
-              <td>Gold-&-Tone</td>
-              <td>Muscle Oasis</td>
-              <td>37 Euros</td>
-            </tr>
-            <tr>
-              <td>2/12/2023</td>
-              <td>HIIT</td>
-              <td>Aerobic Arena</td>
-              <td>22 Euros</td>
-            </tr>
-            <tr>
-              <td>3/12/2023</td>
-              <td>ICG Spin (Standard)</td>
-              <td>Zenith Zone </td>
-              <td>50 Euros</td>
-            </tr>
-            <tr>
-              <td>3/12/2023</td>
-              <td>TRX</td>
-              <td>Body Blitz Chamber</td>
-              <td>50 Euros</td>
-            </tr>
-          </table>
+      </section>
+      <section class="dark">
+        <div class="form-container">
+          <form class="subscribe-form" action="#">
+            <label for="date">Date:</label>
+            <select name="date" type="text" required>
+              <option value="1">1/12/2023</option>
+              <option value="2">2/12/2023</option>
+              <option value="3">3/12/2023</option>
+              <option value="4">4/12/2023</option>
+              <option value="5">5/12/2023</option>
+            </select>
+
+            <label for="sname">Name</label>
+            <input
+              name="name"
+              type="text"
+              required
+              minlength="1"
+              placeholder="e.g Jhon Doe"
+            />
+
+            <label for="m">Phone</label>
+            <input
+              name="m"
+              type="text"
+              required
+              minlength="9"
+              placeholder="e.g 0812345678"
+            />
+
+            <input type="submit" value="Book Class" />
+          </form>
         </div>
-        <p class="note">Note: Refer to map in main loby if needed</p>
-      </div>
-    </section>
-    <section class="dark">
-      <div class="form-container">
-        <form class="subscribe-form" action="#">
-          <label for="date">Date:</label>
-          <select name="date" type="text" required>
-            <option value="1">1/12/2023</option>
-            <option value="2">2/12/2023</option>
-            <option value="3">3/12/2023</option>
-            <option value="4">4/12/2023</option>
-            <option value="5">5/12/2023</option>
-          </select>
-
-          <label for="sname">Name</label>
-          <input name="name" type="text" required minlength="1" placeholder="e.g Jhon Doe">
-
-          <label for="m">Phone</label>
-          <input name="m" type="text" required minlength="9" placeholder="e.g 0812345678">
-
-          <input type="submit" value="Book Class" />
-        </form>
-      </div>
-      <h1>Number Guessing Game</h1>
-  <p>Guess a number between 1 and 10:</p>
-  <input type="number" id="userGuess" min="1" max="10">
-  <button id="submitGuess">Submit Guess</button>
-  <p id="result"></p>
-    </section>
-    <section class="light">
-      <div class="section-header">
-        <h2 class="section-header__title">News</h2>
-        <p class="section-header__subtitle">What's the plan for the rest of the year</p>
-      </div>
-      <div class="news-cards-container">
-        <article class="news-card">
-          <img class="news-card__image" src="https://images.pexels.com/photos/260352/pexels-photo-260352.jpeg" alt="Picture with dumbels"data-text="Lorem impedit enim ">
-          <h2 class="news-card__title">New Weights</h2>
-          <p class="news-card__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore aliquam nisi
-            adipisci distinctio delectus repellat similique molestias excepturi veritatis ipsam, tenetur est illum
-            quossoluta obcaecati aspernatur dolorum, repudiandae consequuntur!</p>
-          <a href="#" class="news-card__read-more-button">Read More</a>
-          <div id="description-text"></div>
-        </article>
-        <article class="news-card">
-          <img class="news-card__image" src=https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 alt="Picture with weight bar in a room" data-text="Lorem recusandae architecto">
-          <h2 class="news-card__title">New Rooms</h2>
-          <p class="news-card__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad, culpa, maiores
-            impedit enim doloribus perferendis vitae recusandae architecto, ea quidem eveniet quis quas. Molestiae
-            obcaecati quam dolorem optio eum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad, culpa,
-            maiores
-            impedit enim doloribus perferendis vitae recusandae architecto, ea quidem eveniet quis quas. Molestiae
-            obcaecati quam dolorem optio eum!</p>
-          <a href="#" class="news-card__read-more-button">Read More</a>
-        </article>
-        <article class="news-card">
-          <div id="description-text"></div>
-          <img class="news-card__image" src="https://images.pexels.com/photos/931324/pexels-photo-931324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Picture with man using elevation circles"data-text="Lorem perferendis vitae recusandae">
-          <h2 class="news-card__title">TRX</h2>
-          <p class="news-card__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nemo odit ab
-            est, consequatur voluptate rem iusto. Dolore explicabo, veniam quas esse quasi, veritatis in sed porro amet
-            vitae exercitationem.</p>
-          <a href="#" class="news-card__read-more-button">Read More</a>
-        </article>
-        <article class="news-card">
-          <div id="description-text"></div>
-          <img class="news-card__image" src="./images/pexels-photo-10810460.jpg" alt=" Picture with gym building"data-text="Lorem dolorem optiot">
-          <h2 class="news-card__title">New Building</h2>
-          <p class="news-card__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nemo odit ab
-            est, consequatur voluptate rem iusto. Dolore explicabo, veniam quas esse quasi, veritatis in sed porro amet
-            vitae exercitationem.</p>
-          <a href="#" class="news-card__read-more-button">Read More</a>
-        </article>
-        <article class="news-card">
-          <img class="news-card__image" src="https://picsum.photos/600/600?random=1" alt="Random pictures using picsum.photos" data-text="Lorem dolorem optio">
-          <h2 class="news-card__title">Car Park</h2>
-          <p class="news-card__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nemo odit ab
-            est, consequatur voluptate rem iusto. Dolore explicabo, veniam quas esse quasi, veritatis in sed porro amet
-            vitae exercitationem.</p>
-          <a href="#" class="news-card__read-more-button">Read More</a>
-        </article>
-      </div>
-    </section>
-    <section class="dark">
-  </section>
-      </div>
-    </section>
-  </main>
-  <footer class="home-footer">&copy; George Carp & Luis Martins 2023</footer>
-</body>
-
+        <h1>Number Guessing Game</h1>
+        <p>Guess a number between 1 and 10:</p>
+        <input type="number" id="userGuess" min="1" max="10" />
+        <button id="submitGuess">Submit Guess</button>
+        <p id="result"></p>
+      </section>
+      <section class="light">
+        <div class="section-header">
+          <h2 class="section-header__title">News</h2>
+          <p class="section-header__subtitle">
+            What's the plan for the rest of the year
+          </p>
+        </div>
+        <div class="news-cards-container">
+          <article class="news-card">
+            <img
+              class="news-card__image"
+              src="https://images.pexels.com/photos/260352/pexels-photo-260352.jpeg"
+              alt="Picture with dumbels"
+              data-text="Lorem impedit enim "
+            />
+            <h2 class="news-card__title">New Weights</h2>
+            <p class="news-card__info">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Inventore aliquam nisi adipisci distinctio delectus repellat
+              similique molestias excepturi veritatis ipsam, tenetur est illum
+              quossoluta obcaecati aspernatur dolorum, repudiandae consequuntur!
+            </p>
+            <a href="#" class="news-card__read-more-button">Read More</a>
+            <div id="description-text"></div>
+          </article>
+          <article class="news-card">
+            <img class="news-card__image"
+            src=https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+            alt="Picture with weight bar in a room" data-text="Lorem recusandae
+            architecto">
+            <h2 class="news-card__title">New Rooms</h2>
+            <p class="news-card__info">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad,
+              culpa, maiores impedit enim doloribus perferendis vitae recusandae
+              architecto, ea quidem eveniet quis quas. Molestiae obcaecati quam
+              dolorem optio eum! Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Rem ad, culpa, maiores impedit enim doloribus
+              perferendis vitae recusandae architecto, ea quidem eveniet quis
+              quas. Molestiae obcaecati quam dolorem optio eum!
+            </p>
+            <a href="#" class="news-card__read-more-button">Read More</a>
+          </article>
+          <article class="news-card">
+            <div id="description-text"></div>
+            <img
+              class="news-card__image"
+              src="https://images.pexels.com/photos/931324/pexels-photo-931324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Picture with man using elevation circles"
+              data-text="Lorem perferendis vitae recusandae"
+            />
+            <h2 class="news-card__title">TRX</h2>
+            <p class="news-card__info">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus nemo odit ab est, consequatur voluptate rem iusto.
+              Dolore explicabo, veniam quas esse quasi, veritatis in sed porro
+              amet vitae exercitationem.
+            </p>
+            <a href="#" class="news-card__read-more-button">Read More</a>
+          </article>
+          <article class="news-card">
+            <div id="description-text"></div>
+            <img
+              class="news-card__image"
+              src="./images/pexels-photo-10810460.jpg"
+              alt=" Picture with gym building"
+              data-text="Lorem dolorem optiot"
+            />
+            <h2 class="news-card__title">New Building</h2>
+            <p class="news-card__info">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus nemo odit ab est, consequatur voluptate rem iusto.
+              Dolore explicabo, veniam quas esse quasi, veritatis in sed porro
+              amet vitae exercitationem.
+            </p>
+            <a href="#" class="news-card__read-more-button">Read More</a>
+          </article>
+          <article class="news-card">
+            <img
+              class="news-card__image"
+              src="https://picsum.photos/600/600?random=1"
+              alt="Random pictures using picsum.photos"
+              data-text="Lorem dolorem optio"
+            />
+            <h2 class="news-card__title">Car Park</h2>
+            <p class="news-card__info">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus nemo odit ab est, consequatur voluptate rem iusto.
+              Dolore explicabo, veniam quas esse quasi, veritatis in sed porro
+              amet vitae exercitationem.
+            </p>
+            <a href="#" class="news-card__read-more-button">Read More</a>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="home-footer">&copy; George Carp & Luis Martins 2023</footer>
+    <script src="script/script.js" defer></script>
+  </body>
 </html>
