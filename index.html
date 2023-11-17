@@ -9,11 +9,16 @@
   <script src="script/script.js" defer></script>
 </head>
 <body>
-  <header class="NCI-GYM">
+  <div class="video-container">
+    <video autoplay muted loop id="myVideo">
+      <source src="./videos/pexels-tima-miroshnichenko-6389061 (2160p).mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <header class="NCI-GYM">
     <nav class="head-navigation">
-      <a href="" class="site-logo">NCI GYM</>
+      <a href="" class="site-logo">NCI GYM</a>
         <ul>
-          <li><a href="Pages/Register.html">Regsdsster</a></li>
+          <li><a href="Pages/Register.html">Register</a></li>
           <li><a href="Pages/about.html">About</a></li>
           <li><a href="Pages/subscription.html">Subscription</a></li>
         </ul>
@@ -22,9 +27,11 @@
       <h1 class="NCI-GYM-container__title text_center">NCI GYM</h1>
       <p class="NCI-GYM-container__subtitle text_center">National College of Ireland's best gym
       </p>
-      <a class="NCI-GYM-container__book-button" href="#">Register Now</a>
+      <a class="NCI-GYM-container__book-button" href="./Pages/Register.html">Register Now</a>
     </div>
   </header>
+  </div>
+  
   <main>
   <script src="script.js" defer></script>
     <section class="dark">
@@ -33,44 +40,46 @@
           <h2 class="section-header__title">Upcoming Classes</h2>
           <p class="section-header__subtitle">When and where activities are booked</p>
         </div>
-        <table class="upcoming-classes-table">
-          <tr>
-            <th>Date</th>
-            <th>Activity</th>
-            <th>Room</th>
-            <th>Price</th>
-          </tr>
-          <tr>
-            <td>1/12/2023</td>
-            <td>Body Sculpt</td>
-            <td>CrossFit Citadel</td>
-            <td>35 Euros</td>
-          </tr>
-          <tr>
-            <td>2/12/2023</td>
-            <td>Gold-&-Tone</td>
-            <td>Muscle Oasis</td>
-            <td>37 Euros</td>
-          </tr>
-          <tr>
-            <td>2/12/2023</td>
-            <td>HIIT</td>
-            <td>Aerobic Arena</td>
-            <td>22 Euros</td>
-          </tr>
-          <tr>
-            <td>3/12/2023</td>
-            <td>ICG Spin (Standard)</td>
-            <td>Zenith Zone </td>
-            <td>50 Euros</td>
-          </tr>
-          <tr>
-            <td>3/12/2023</td>
-            <td>TRX</td>
-            <td>Body Blitz Chamber</td>
-            <td>50 Euros</td>
-          </tr>
-        </table>
+        <div class="table-container">
+          <table class="upcoming-classes-table">
+            <tr>
+              <th>Date</th>
+              <th>Activity</th>
+              <th>Room</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>1/12/2023</td>
+              <td>Body Sculpt</td>
+              <td>CrossFit Citadel</td>
+              <td>35 Euros</td>
+            </tr>
+            <tr>
+              <td>2/12/2023</td>
+              <td>Gold-&-Tone</td>
+              <td>Muscle Oasis</td>
+              <td>37 Euros</td>
+            </tr>
+            <tr>
+              <td>2/12/2023</td>
+              <td>HIIT</td>
+              <td>Aerobic Arena</td>
+              <td>22 Euros</td>
+            </tr>
+            <tr>
+              <td>3/12/2023</td>
+              <td>ICG Spin (Standard)</td>
+              <td>Zenith Zone </td>
+              <td>50 Euros</td>
+            </tr>
+            <tr>
+              <td>3/12/2023</td>
+              <td>TRX</td>
+              <td>Body Blitz Chamber</td>
+              <td>50 Euros</td>
+            </tr>
+          </table>
+        </div>
         <p class="note">Note: Refer to map in main loby if needed</p>
       </div>
     </section>
@@ -157,17 +166,11 @@
       </div>
     </section>
     <section class="dark">
-      <div class="video-container">
-          <video width="640" height="360" autoplay loop muted>
-              <source src="./videos/pexels-tima-miroshnichenko-6389061 (2160p).mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>
-      </div>
   </section>
       </div>
     </section>
   </main>
-  <footer class="home-footer">&copy; George Carp 2023</footer>
+  <footer class="home-footer">&copy; George Carp & Luis Martins 2023</footer>
 </body>
 
 </html>
