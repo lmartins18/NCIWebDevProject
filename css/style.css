@@ -70,12 +70,13 @@ picture {
 :root {
   /* Colours */
   height: 100%;
-  background: linear-gradient(120deg, black, gray);
-  background-size: 200% 200%;
+  background: var(--dark-gradient);
+  /* background-size: 200% 200%; */
   animation: gradientFade 5s ease-in-out infinite;
   /* color */
-  --nyanza: #E9FFDB ;
+  --nyanza: #e9ffdb;
   --dark-purple: #301934;
+  --dark-gradient: linear-gradient(120deg, black, gray);
   /* margins and padding */
   --margin-xxs: 0.2rem;
   --margin-xs: 0.4rem;
@@ -146,7 +147,7 @@ a {
 body,
 head,
 header {
-  background: linear-gradient(120deg, black, gray);
+  background: var(--dark-gradient);
   font-family: "Roboto", sans-serif;
   color: white;
 }
@@ -154,7 +155,7 @@ header {
 /* Header */
 header.NCI-GYM {
   height: 100%;
-  background: linear-gradient(120deg, black, gray);
+  background: var(--dark-gradient);
   background-size: 200% 200%;
   animation: gradientFade 5s ease-in-out infinite;
 }
@@ -163,7 +164,7 @@ header.NCI-GYM {
   backdrop-filter: blur(16px);
 }
 nav.head-navigation {
-  background-color: linear-gradient(120deg, black, gray);
+  background: var(--dark-gradient);
   z-index: 100;
 }
 
@@ -219,7 +220,7 @@ nav.head-navigation ul li a:hover {
 }
 @media (max-width: 600px) {
   .NCI-GYM-container {
-    padding: 0.4rem;
+    padding-top: 10rem;
   }
 }
 
@@ -275,8 +276,8 @@ section {
 }
 
 .dark {
-  background-color: var(--dark-purple);
-  color: var(--nyanza) !important;
+  background: var(--dark-gradient);
+  color: white !important;
 }
 
 .light {
@@ -299,14 +300,14 @@ section {
   margin: 0 auto;
   display: grid;
   gap: 3rem;
-  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(3, 1fr);
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .news-card {
   display: flex;
   flex-direction: column;
-  background-color: var(--dark-purple);
+  background: var(--dark-gradient);
   color: var(--nyanza);
   padding: 2em 2em;
   border-radius: 0.4rem;
