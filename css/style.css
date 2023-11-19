@@ -7,7 +7,6 @@ header {
   height: 75vh;
   min-height: 25rem;
   width: 100%;
-  overflow: hidden;
 }
 
 header video,
@@ -155,7 +154,6 @@ header {
 /* Header */
 header.NCI-GYM {
   height: 100%;
-  background: var(--dark-gradient);
   background-size: 200% 200%;
   animation: gradientFade 5s ease-in-out infinite;
 }
@@ -164,7 +162,6 @@ header.NCI-GYM {
   backdrop-filter: blur(16px);
 }
 nav.head-navigation {
-  background: var(--dark-gradient);
   z-index: 100;
 }
 
@@ -446,6 +443,7 @@ table.upcoming-classes-table tr:nth-of-type(odd) {
   overflow: auto;
 }
 /* TODO: This is just a workaround, please fix the underlying problem */
+/* The forms on the index page should be responsive or fit the screen, not scrollable. */
 section {
   overflow: auto;
 }
@@ -500,5 +498,16 @@ section {
   100% {
     transform: scale(3);
     opacity: 0;
+  }
+}
+@keyframes gradientFade {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
