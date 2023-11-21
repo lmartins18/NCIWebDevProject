@@ -406,7 +406,11 @@ html, body {
 }
 
 body {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
   place-items: center;
 }
 

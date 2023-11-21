@@ -163,6 +163,8 @@ header.NCI-GYM {
 }
 nav.head-navigation {
   z-index: 100;
+  position: sticky;
+  top: 0;
 }
 
 nav.head-navigation * {
