@@ -472,7 +472,7 @@
     transform: translateY(-10%);
   }
 
-  // TODO why is this repeated?
+  /* TODO why is this repeated?*/
   .title {
     font-size: 2rem;
     font-weight: bold;
