@@ -492,12 +492,12 @@ main#subscription-main {
   transform: translateY(-10%);
 }
 
-// TODO why is this repeated?
-.title {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-}
+  /* TODO why is this repeated?*/
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
 
 .title {
   font-size: 1.3rem;
