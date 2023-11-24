@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
 
 :root {
@@ -7,64 +6,7 @@
   --nyanza: #e9ffdb;
   --dark-purple: #301934;
   --dark-gradient: linear-gradient(120deg, black, gray);
-  /* margins and padding */
-  --margin-xxs: 0.2rem;
-  --margin-xs: 0.4rem;
-  --margin-s: 0.8rem;
-  --margin-m: 1rem;
-  --margin-l: 2rem;
-  --margin-xl: 4rem;
-
-  /* Type Scale */
-  --text-size-xs: 0.64rem;
-  --text-size-sm: 0.8rem;
-  --text-size-md: 1rem;
-  --text-size-lg: 1.25rem;
-  --text-size-xl: 1.56rem;
-  --text-size-2xl: 1.95rem;
-  --text-size-3xl: 2.44rem;
-  --text-size-4xl: 3.05rem;
-  --text-size-5xl: 3.81rem;
 }
-/* test */
-header {
-  position: relative;
-  background-color: black;
-  height: 75vh;
-  min-height: 25rem;
-  width: 100%;
-}
-
-header video,
-header #video-poster {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-header #video-poster {
-  display: none;
-}
-
-header .container {
-  position: relative;
-  z-index: 2;
-}
-
-header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.5;
-  z-index: 1;
-}
-
-/* end test */
 
 *,
 *::before,
@@ -73,11 +15,13 @@ header .overlay {
   padding: 0;
   margin: 0;
 }
+
 html {
   background: var(--dark-gradient);
   background-size: 200% 200%;
   animation: gradientFade 5s ease-in-out infinite;
 }
+
 html,
 body {
   width: 100%;
@@ -85,104 +29,9 @@ body {
   margin: 0;
 }
 
-body#subscription-body {
-  display: flex;
-  flex-direction: column;
-  animation: gradientFade 5s ease-in-out infinite;
-  background: linear-gradient(120deg, black, gray) !important;
-  background-size: 200% 200% !important;
-}
-
 img,
 picture {
   max-width: 100%;
-}
-
-/* Type Scale */
-
-p {
-  margin-bottom: 1rem;
-  line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  margin: 3rem 0 1.38rem;
-  line-height: 1.3;
-}
-
-h1 {
-  margin-top: 0;
-  font-size: 3.052rem;
-}
-
-h2 {
-  font-size: 2.441rem;
-}
-
-h3 {
-  font-size: 1.953rem;
-}
-
-h4 {
-  font-size: 1.563rem;
-}
-
-h5 {
-  font-size: 1.25rem;
-}
-
-small,
-.text_small {
-  font-size: 0.8rem;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-/* Header */
-
-/* header.NCI-GYM {
-    @apply h-full bg-[200%_200%] gradient-fade;
-  } */
-
-/* .backdrop-filter {
-    -webkit-backdrop-filter: blur(16px);
-    backdrop-filter: blur(16px);
-  } */
-
-nav.head-navigation {
-  @apply w-100 sticky top-0 flex align-items-center p-4 backdrop-blur-md;
-}
-
-nav.head-navigation * {
-  color: white !important;
-}
-
-nav.head-navigation .site-logo {
-  font-weight: bold;
-  font-size: 2rem;
-  text-transform: uppercase;
-}
-
-nav.head-navigation .site-logo:hover {
-  text-decoration: none;
-}
-
-nav.head-navigation ul {
-  margin-left: auto;
-}
-
-nav.head-navigation ul li {
-  display: inline-block;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin: 0 1rem;
 }
 
 nav.head-navigation ul li a {
@@ -199,19 +48,9 @@ nav.head-navigation ul li a:hover {
   transition: 0.3s;
 }
 
-.NCI-GYM-container * {
-  z-index: 1;
-  color: white !important;
-}
-
 @media (max-width: 600px) {
   .NCI-GYM-container {
     padding-top: 10rem;
-  }
-}
-@media (pointer: coarse) and (hover: none) {
-  header video {
-    display: none;
   }
 }
 
@@ -249,6 +88,9 @@ nav.head-navigation ul li a:hover {
 
 section {
   padding: 4rem;
+  /* TODO: This is just a workaround, please fix the underlying problem */
+  /* The forms on the index page should be responsive or fit the screen, not scrollable. */
+  overflow: auto;
 }
 
 .section-header {
@@ -276,25 +118,11 @@ section {
   color: var(--dark-purple);
 }
 
-.text_center {
-  text-align: center;
-}
-
 .note {
   font-size: 0.9rem;
 }
 
-/* News Cards */
-
-.news-cards-container {
-  max-width: 1900px;
-  margin: 0 auto;
-  display: grid;
-  gap: 3rem;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
+/* Index News Cards */
 .news-card {
   display: flex;
   flex-direction: column;
@@ -306,7 +134,7 @@ section {
     0px 2px 2px 1px rgba(0, 0, 0, 0.25);
 }
 
-.news-card__image {
+.news-card img {
   width: 100%;
   aspect-ratio: 1/1;
   overflow: hidden;
@@ -315,27 +143,22 @@ section {
   margin-bottom: 2rem;
 }
 
-.news-card__title {
+.news-card h2 {
   margin: 0 0 1rem 0;
 }
 
-.news-card__seperator {
-  color: white;
-  width: 60%;
-}
-
-.news-card__info {
+.news-card p {
   color: white;
   margin-bottom: 4rem;
   max-height: 14ch;
   overflow: hidden;
 }
 
-.news-card__info::after {
+.news-card p::after {
   content: "...";
 }
 
-.news-card__read-more-button {
+.news-card a {
   width: -moz-fit-content;
   width: fit-content;
   padding: 1em 0.8em;
@@ -345,31 +168,13 @@ section {
   transition: 0.3s;
 }
 
-.news-card__read-more-button:hover {
+.news-card a:hover {
   border: 1px solid var(--);
   background: var(--orange-web);
   color: white;
   transition: 0.3s;
 }
-
-/* Video */
-
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-}
-
-.video-player {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
 /* Tables */
-
 table.upcoming-classes-table {
   width: 100%;
   margin-bottom: 1rem;
@@ -432,28 +237,12 @@ table.upcoming-classes-table tr:nth-of-type(odd) {
 }
 
 /*Footer*/
-
 .home-footer {
   background-color: black;
   color: white;
   padding: 4rem;
 }
-
-.table-container {
-  width: 100%;
-  overflow: auto;
-}
-
-/* TODO: This is just a workaround, please fix the underlying problem */
-
-/* The forms on the index page should be responsive or fit the screen, not scrollable. */
-
-section {
-  overflow: auto;
-}
-
 /* Subscription */
-
 main#subscription-main {
   flex: 1;
   place-items: center;
@@ -492,12 +281,12 @@ main#subscription-main {
   transform: translateY(-10%);
 }
 
-  /* TODO why is this repeated?*/
-  .title {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-  }
+/* TODO why is this repeated?*/
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
 
 .title {
   font-size: 1.3rem;
@@ -802,193 +591,8 @@ main#subscription-main {
     height: 350px;
   }
 }
-
-.card:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 110%;
-  background-size: cover;
-  background-position: 0 0;
-  transition: transform calc(var(--d) * 1.5) var(--e);
-  pointer-events: none;
-}
-
-.card:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200%;
-  pointer-events: none;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.009) 11.7%,
-    rgba(0, 0, 0, 0.034) 22.1%,
-    rgba(0, 0, 0, 0.072) 31.2%,
-    rgba(0, 0, 0, 0.123) 39.4%,
-    rgba(0, 0, 0, 0.182) 46.6%,
-    rgba(0, 0, 0, 0.249) 53.1%,
-    rgba(0, 0, 0, 0.32) 58.9%,
-    rgba(0, 0, 0, 0.394) 64.3%,
-    rgba(0, 0, 0, 0.468) 69.3%,
-    rgba(0, 0, 0, 0.54) 74.1%,
-    rgba(0, 0, 0, 0.607) 78.8%,
-    rgba(0, 0, 0, 0.668) 83.6%,
-    rgba(0, 0, 0, 0.721) 88.7%,
-    rgba(0, 0, 0, 0.762) 94.1%,
-    rgba(0, 0, 0, 0.79) 100%
-  );
-  transform: translateY(-50%);
-  transition: transform calc(var(--d) * 2) var(--e);
-}
-
-.card:nth-child(1):before {
-  background-image: url(https://images.pexels.com/photos/1431282/pexels-photo-1431282.jpeg);
-}
-
-.card:nth-child(2):before {
-  background-image: url(https://images.pexels.com/photos/4752861/pexels-photo-4752861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-}
-
-.card:nth-child(3):before {
-  background-image: url(https://images.pexels.com/photos/4753890/pexels-photo-4753890.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-}
-
-.card:nth-child(4):before {
-  background-image: url(https://images.pexels.com/photos/14335660/pexels-photo-14335660.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-}
-
-.content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 1rem;
-  transition: transform var(--d) var(--e);
-  z-index: 1;
-}
-
-.content > * + * {
-  margin-top: 1rem;
-}
-
-.title {
-  font-size: 1.3rem;
-  font-weight: bold;
-  line-height: 1.2;
-}
-
-.copy {
-  font-family: var(--font-serif);
-  font-size: 1.125rem;
-  font-style: italic;
-  line-height: 1.35;
-}
-
-.btn {
-  cursor: pointer;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.65rem;
-  font-weight: bold;
-  letter-spacing: 0.025rem;
-  text-transform: uppercase;
-  color: white;
-  background-color: black;
-  border: none;
-}
-
-.btn:hover {
-  background-color: #0d0d0d;
-}
-
-.btn:focus {
-  outline: 1px dashed yellow;
-  outline-offset: 3px;
-}
-
-@media (hover: hover) and (min-width: 600px) {
-  .card:after {
-    transform: translateY(0);
-  }
-
-  .content {
-    transform: translateY(calc(100% - 4.5rem));
-  }
-
-  .content > *:not(.title) {
-    opacity: 0;
-    transform: translateY(1rem);
-    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
-  }
-
-  .card:hover,
-  .card:focus-within {
-    align-items: center;
-  }
-
-  .card:hover:before,
-  .card:focus-within:before {
-    transform: translateY(-4%);
-  }
-
-  .card:hover:after,
-  .card:focus-within:after {
-    transform: translateY(-50%);
-  }
-
-  .card:hover .content,
-  .card:focus-within .content {
-    transform: translateY(0);
-  }
-
-  .card:hover .content > *:not(.title),
-  .card:focus-within .content > *:not(.title) {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: calc(var(--d) / 8);
-  }
-
-  .card:focus-within:before,
-  .card:focus-within:after,
-  .card:focus-within .content,
-  .card:focus-within .content > *:not(.title) {
-    transition-duration: 0s;
-  }
-}
-
 /* view benefits were added instead of redirecting
 page to google.ie   */
-
-.btn {
-  cursor: pointer;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.65rem;
-  font-weight: bold;
-  letter-spacing: 0.025rem;
-  text-transform: uppercase;
-  color: white;
-  background-color: black;
-  border: none;
-}
-
-.btn:hover {
-  background-color: #0d0d0d;
-}
-
-.btn:focus {
-  outline: 1px dashed yellow;
-  outline-offset: 3px;
-}
-
 details ul {
   margin-top: 10px;
   list-style: none;

@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="NCI-GYM h-full bg-200 animate-gradient-fade">
+    <header class="relative w-full min-h-[25rem] h-[100vh] bg-200 animate-gradient-fade NCI-GYM ">
       <video
         muted
         playsinline
         autoplay
         id="myVideo"
+        class="w-full h-full absolute object-cover"
         poster="./images/video-poster.jpg"
       >
         <source
@@ -26,24 +27,25 @@
       </video>
       <img
         id="video-poster"
+        class="hidden w-full h-full absolute object-cover"
         src="./images/video-poster.jpg"
         alt="header background dumbbells"
       />
       <nav
-        class="head-navigation w-100 sticky top-0 flex align-items-center p-4 backdrop-blur-md z-50"
+        class="head-navigation w-full sticky top-0 flex align-items-center p-4 backdrop-blur-md z-50 text-white hover:no-underline"
       >
-        <a href="#" class="site-logo text-black">NCI GYM</a>
-        <ul class="my-auto">
+        <a href="#" class="site-logo font-bold text-xl uppercase">NCI GYM</a>
+        <ul class="ml-auto uppercase [&>li]:inline-block [&>li]:font-bold [&>li]:mx-3">
           <li><a href="pages/register.html">Register</a></li>
           <li><a href="pages/about.html">About</a></li>
           <li><a href="pages/subscription.html">Subscription</a></li>
         </ul>
       </nav>
       <div
-        class="NCI-GYM-container opacity-100 animate-slide-in-below min-h-[60vh] flex flex-col items-center justify-center px-32 py-60"
+        class="NCI-GYM-container opacity-100 animate-slide-in-below min-h-[60vh] flex flex-col items-center justify-center px-32 py-60 text-white [&>*]:z-10"
       >
-        <h1 class="NCI-GYM-container__title text_center">NCI GYM</h1>
-        <p class="NCI-GYM-container__subtitle text_center">
+        <h1 class="NCI-GYM-container__title text-center">NCI GYM</h1>
+        <p class="NCI-GYM-container__subtitle text-center">
           National College of Ireland's best gym
         </p>
         <a class="NCI-GYM-container__book-button" href="./Pages/Register.html"
@@ -60,7 +62,7 @@
               When and where activities are booked
             </p>
           </div>
-          <div class="table-container">
+          <div class="w-100 overflow-auto">
             <table class="upcoming-classes-table">
               <tr>
                 <th>Date</th>
@@ -152,31 +154,31 @@
             What's the plan for the rest of the year
           </p>
         </div>
-        <div class="news-cards-container">
+        <div class="news-cards-container max-w-full mx-auto grid    grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-3" >
           <article class="news-card">
             <img
-              class="news-card__image"
+              
               src="https://images.pexels.com/photos/260352/pexels-photo-260352.jpeg"
               alt="Picture with dumbels"
               data-text="Lorem impedit enim "
             />
-            <h2 class="news-card__title">New Weights</h2>
-            <p class="news-card__info">
+            <h2>New Weights</h2>
+            <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Inventore aliquam nisi adipisci distinctio delectus repellat
               similique molestias excepturi veritatis ipsam, tenetur est illum
               quossoluta obcaecati aspernatur dolorum, repudiandae consequuntur!
             </p>
-            <a href="#" class="news-card__read-more-button">Read More</a>
+            <a href="#">Read More</a>
             <div id="description-text"></div>
           </article>
           <article class="news-card">
-            <img class="news-card__image"
+            <img 
             src=https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
             alt="Picture with weight bar in a room" data-text="Lorem recusandae
             architecto">
-            <h2 class="news-card__title">New Rooms</h2>
-            <p class="news-card__info">
+            <h2>New Rooms</h2>
+            <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad,
               culpa, maiores impedit enim doloribus perferendis vitae recusandae
               architecto, ea quidem eveniet quis quas. Molestiae obcaecati quam
@@ -185,57 +187,56 @@
               perferendis vitae recusandae architecto, ea quidem eveniet quis
               quas. Molestiae obcaecati quam dolorem optio eum!
             </p>
-            <a href="#" class="news-card__read-more-button">Read More</a>
+            <a href="#">Read More</a>
           </article>
           <article class="news-card">
-            <div id="description-text"></div>
             <img
-              class="news-card__image"
+              
               src="https://images.pexels.com/photos/931324/pexels-photo-931324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Picture with man using elevation circles"
               data-text="Lorem perferendis vitae recusandae"
             />
-            <h2 class="news-card__title">TRX</h2>
-            <p class="news-card__info">
+            <h2>TRX</h2>
+            <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatibus nemo odit ab est, consequatur voluptate rem iusto.
               Dolore explicabo, veniam quas esse quasi, veritatis in sed porro
               amet vitae exercitationem.
             </p>
-            <a href="#" class="news-card__read-more-button">Read More</a>
+            <a href="#">Read More</a>
           </article>
           <article class="news-card">
             <div id="description-text"></div>
             <img
-              class="news-card__image"
+              
               src="./images/pexels-photo-10810460.jpg"
               alt=" Picture with gym building"
               data-text="Lorem dolorem optiot"
             />
-            <h2 class="news-card__title">New Building</h2>
-            <p class="news-card__info">
+            <h2>New Building</h2>
+            <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatibus nemo odit ab est, consequatur voluptate rem iusto.
               Dolore explicabo, veniam quas esse quasi, veritatis in sed porro
               amet vitae exercitationem.
             </p>
-            <a href="#" class="news-card__read-more-button">Read More</a>
+            <a href="#">Read More</a>
           </article>
           <article class="news-card">
             <img
-              class="news-card__image"
+              
               src="https://picsum.photos/600/600?random=1"
               alt="Random pictures using picsum.photos"
               data-text="Lorem dolorem optio"
             />
-            <h2 class="news-card__title">Car Park</h2>
-            <p class="news-card__info">
+            <h2>Car Park</h2>
+            <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatibus nemo odit ab est, consequatur voluptate rem iusto.
               Dolore explicabo, veniam quas esse quasi, veritatis in sed porro
               amet vitae exercitationem.
             </p>
-            <a href="#" class="news-card__read-more-button">Read More</a>
+            <a href="#">Read More</a>
           </article>
         </div>
       </section>

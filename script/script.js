@@ -1,8 +1,8 @@
 // TODO: Video cant autoplay on safari, for now workaround just play if browser not safari..
 // Find a better way of doing this.
 if (navigator.vendor == "Apple Computer, Inc.") {
-  $("#myVideo").remove();
-  $("#video-poster").css('display', 'inline-block');
+  document.querySelector("#myVideo").remove();
+  document.querySelector("#video-poster").classList.remove("hidden");
   
 }
 document.addEventListener('DOMContentLoaded', function () {
