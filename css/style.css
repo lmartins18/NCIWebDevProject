@@ -604,6 +604,10 @@ details ul li::before {
   margin-right: 0.5rem;
 }
 
+/* User input in Number Guessing game is set on white (not visible) , changed to black */
+#userGuess {
+  color: black;}
+
 /* TODO: organize media queries.
    Subscription page was designed mobile first while others were designed desktop first.
    Media queries must be organized or framework (BS, Tailwind) must be used.
@@ -755,3 +759,4 @@ details ul li::before {
     background-position: 0% 50%;
   }
 }
+
