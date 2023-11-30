@@ -48,12 +48,6 @@ nav.head-navigation ul li a:hover {
   transition: 0.3s;
 }
 
-@media (max-width: 600px) {
-  .NCI-GYM-container {
-    padding-top: 10rem;
-  }
-}
-
 .NCI-GYM-container__title {
   text-transform: uppercase;
   font-size: 8rem;
@@ -84,12 +78,8 @@ nav.head-navigation ul li a:hover {
   transition: transform 0.5s;
 }
 
-/*  sections  */
-
 section {
   padding: 4rem;
-  /* TODO: This is just a workaround, please fix the underlying problem */
-  /* The forms on the index page should be responsive or fit the screen, not scrollable. */
   overflow: auto;
 }
 
@@ -111,11 +101,6 @@ section {
 .dark {
   background: var(--dark-gradient);
   color: white !important;
-}
-
-.light {
-  background-color: var(--nyanza);
-  color: var(--dark-purple);
 }
 
 .note {
@@ -175,11 +160,6 @@ section {
   transition: 0.3s;
 }
 /* Tables */
-table.upcoming-classes-table {
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
 table.upcoming-classes-table th,
 table.upcoming-classes-table td {
   background: rgba(0, 0, 0, 0.15);
@@ -207,16 +187,6 @@ table.upcoming-classes-table tr:nth-of-type(odd) {
 .valid {
   border: 1px solid green;
 }
-.error-message {
-  color: red;
-  margin-top: 5px;
-}
-
-.valid-message {
-  color: green;
-  margin-top: 5px;
-}
-
 
 /*Footer*/
 .home-footer {
@@ -525,12 +495,6 @@ main#subscription-main {
   width: 100%;
 }
 
-@media (min-width: 800px) {
-  .page-content {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
 .card {
   position: relative;
   display: flex;
@@ -568,13 +532,6 @@ main#subscription-main {
     0 32px 64px rgba(0, 0, 0, 0.4);
 }
 
-@media (min-width: 600px) {
-  .card {
-    height: 350px;
-  }
-}
-/* view benefits were added instead of redirecting
-page to google.ie   */
 details ul {
   margin-top: 10px;
   list-style: none;
@@ -586,16 +543,6 @@ details ul li::before {
   margin-right: 0.5rem;
 }
 
-/* User input in Number Guessing game is set on white (not visible) , changed to black */
-#userGuess {
-  color: black;
-}
-
-/* TODO: organize media queries.
-   Subscription page was designed mobile first while others were designed desktop first.
-   Media queries must be organized or framework (BS, Tailwind) must be used.
-*/
-
 @media (max-width: 760px) {
   table.upcoming-classes-table th,
   table.upcoming-classes-table td {
@@ -604,6 +551,10 @@ details ul li::before {
 }
 
 @media (max-width: 600px) {
+  
+  .NCI-GYM-container {
+    padding-top: 10rem;
+  }
   nav.head-navigation {
     position: relative;
   }
@@ -636,6 +587,9 @@ details ul li::before {
   .page-content {
     grid-template-columns: repeat(2, 1fr);
   }
+  .card {
+    height: 350px;
+  }
 }
 
 @media (min-width: 800px) {
@@ -643,13 +597,7 @@ details ul li::before {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
-@media (min-width: 600px) {
-  .card {
-    height: 350px;
-  }
-}
-
+ 
 @media (hover: hover) and (min-width: 600px) {
   .card:after {
     transform: translateY(0);

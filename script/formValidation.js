@@ -107,7 +107,7 @@ function validateForm() {
   // Return early if valid.
   if (invalidInputs.length === 0) {
     formMessage.innerHTML =
-      '<span class="valid-message">Form submitted successfully!</span>';
+      '<span class="text-green-500 mt-3">Form submitted successfully!</span>';
     // Display success message.
     setTimeout(() => {
       document.getElementById("registration-form").classList.toggle("hidden");

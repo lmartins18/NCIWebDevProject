@@ -20,7 +20,7 @@
         poster="./images/video-poster.jpg"
       >
         <source
-          src="./videos/pexels-tima-miroshnichenko-6389061 (2160p).mp4"
+          src="./videos/dumbbells-video.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
@@ -63,7 +63,7 @@
             </p>
           </div>
           <div class="w-100 overflow-auto">
-            <table class="upcoming-classes-table">
+            <table class="upcoming-classes-table w-full mb-1">
               <tr>
                 <th>Date</th>
                 <th>Activity</th>
@@ -109,7 +109,7 @@
         <div class="form-container">
           <form class="subscribe-form" action="#">
             <label for="date">Date:</label>
-            <select name="date" type="text" required>
+            <select name="date" class="text-black" type="text" required>
               <option value="1">1/12/2023</option>
               <option value="2">2/12/2023</option>
               <option value="3">3/12/2023</option>
@@ -123,7 +123,7 @@
               type="text"
               required
               minlength="1"
-              placeholder="e.g Jhon Doe"
+              placeholder="e.g John Doe"
             />
 
             <label for="m">Phone</label>
@@ -143,7 +143,7 @@
         </div>
         <h1>Number Guessing Game</h1>
         <p>Guess a number between 1 and 10:</p>
-        <input type="number" id="userGuess" min="1" max="10" />
+        <input type="number" class="text-black" id="userGuess" min="1" max="10" />
         <button id="submitGuess">Submit Guess</button>
         <p id="result"></p>
       </section>
