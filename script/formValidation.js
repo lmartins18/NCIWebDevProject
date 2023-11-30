@@ -1,3 +1,10 @@
+function goToHomepage() {
+  // Create a new <a> element
+  var link = document.createElement('a');
+  link.href = "./../index.html";
+  document.body.appendChild(link);
+  link.click();
+}
 function validateInput(field) {
   const input = document.getElementById(field);
   input.classList.toggle("valid", input.value.trim() !== "");
