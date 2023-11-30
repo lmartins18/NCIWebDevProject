@@ -27,6 +27,7 @@
     </nav>
     <main class="flex-1 p-3 overflow-auto">
       <form
+        id="registration-form"
         class="max-w-md mx-auto my-8 p-6 bg-white rounded-md shadow-md my-auto h-100 overflow-auto"
         onsubmit="validateForm()"
       >
@@ -101,7 +102,10 @@
             class="mt-1 p-2 w-full border rounded-md"
           />
         </div>
-        <ul id="passwordErrorList" class="list-disc list-outside mx-3 text-red-500 mb-3"></ul>
+        <ul
+          id="passwordErrorList"
+          class="list-disc list-outside mx-3 text-red-500 mb-3"
+        ></ul>
         <div class="mb-4">
           <label
             for="phoneNumber"
@@ -158,8 +162,28 @@
           Register
         </button>
         <div id="formMessage" class="mt-4 text-red-500"></div>
-        <ul id="emptyFieldsList" class="list-disc mx-3 text-red-500 list-outside [&>li]:cursor-pointer"></ul>
+        <ul
+          id="emptyFieldsList"
+          class="list-disc mx-3 text-red-500 list-outside [&>li]:cursor-pointer"
+        ></ul>
       </form>
+      <!-- Success -->
+      <div id="success-screen" class="h-full w-full flex hidden">
+        <div
+          class="max-w-md mx-auto my-8 p-6 bg-white rounded-md shadow-md my-auto h-100 overflow-auto"
+        >
+          <h2 class="text-2xl font-semibold text-center mb-4">
+            Registration Successful!
+          </h2>
+          <p class="text-center mb-4">Thank you for registering with NCI GYM.</p>
+          <button
+            onclick="window.location.href = './../../index.html'"
+            class="w-full bg-blue-500 text-white p-2 rounded-md"
+          >
+            Go to Homepage
+          </button>
+        </div>
+      </div>
     </main>
   </body>
 </html>
