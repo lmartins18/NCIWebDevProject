@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>National College of Ireland Gym</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" >
   </head>
   <body>
-    <header class="relative w-full min-h-[25rem] h-[100vh] bg-200 animate-gradient-fade NCI-GYM ">
+    <header
+      class="relative w-full min-h-[25rem] h-[100vh] bg-200 animate-gradient-fade NCI-GYM"
+    >
       <video
         muted
         playsinline
@@ -19,10 +21,7 @@
         class="w-full h-full absolute object-cover"
         poster="./images/video-poster.jpg"
       >
-        <source
-          src="./videos/dumbbells-video.mp4"
-          type="video/mp4"
-        />
+        <source src="./videos/dumbbells-video.mp4" type="video/mp4" >
         Your browser does not support the video tag.
       </video>
       <img
@@ -30,12 +29,14 @@
         class="hidden w-full h-full absolute object-cover"
         src="./images/video-poster.jpg"
         alt="header background dumbbells"
-      />
+      >
       <nav
         class="head-navigation w-full sticky top-0 flex align-items-center p-4 backdrop-blur-md z-50 text-white hover:no-underline"
       >
         <a href="#" class="site-logo font-bold text-xl uppercase">NCI GYM</a>
-        <ul class="ml-auto uppercase [&>li]:inline-block [&>li]:font-bold [&>li]:mx-3">
+        <ul
+          class="ml-auto uppercase [&>li]:inline-block [&>li]:font-bold [&>li]:mx-3"
+        >
           <li><a href="pages/register.html">Register</a></li>
           <li><a href="pages/about.html">About</a></li>
           <li><a href="pages/subscription.html">Subscription</a></li>
@@ -102,14 +103,13 @@
               </tr>
             </table>
           </div>
-          <p class="note">Note: Refer to map in main loby if needed</p>
+          <p class="note">Note: Refer to map in main lobby if needed</p>
         </div>
-      </section>
-      <section class="dark">
-        <div class="form-container">
+        <div class="mt-6">
           <form class="subscribe-form" action="#">
             <label for="date">Date:</label>
-            <select name="date" class="text-black" type="text" required>
+            <select id="date" name="date" class="text-black" required>
+              <option value="">Select a date</option>
               <option value="1">1/12/2023</option>
               <option value="2">2/12/2023</option>
               <option value="3">3/12/2023</option>
@@ -117,33 +117,38 @@
               <option value="5">5/12/2023</option>
             </select>
 
-            <label for="sname">Name</label>
+            <label for="name">Name</label>
             <input
               name="name"
+              id="name"
               type="text"
               required
               minlength="1"
               placeholder="e.g John Doe"
-            />
+            >
 
             <label for="m">Phone</label>
             <input
+              id="m"
               name="m"
               type="text"
               required
               minlength="9"
               placeholder="e.g 0812345678"
-            />
+            >
 
-            <input type="submit" value="Book Class" />
+            <input type="submit" value="Book Class" >
           </form>
-          <br></div>
-          <br></div>
-          <br></div>
         </div>
-        <h1>Number Guessing Game</h1>
+        <p class="text-lg">Number Guessing Game</p>
         <p>Guess a number between 1 and 10:</p>
-        <input type="number" class="text-black" id="userGuess" min="1" max="10" />
+        <input
+          type="number"
+          class="text-black"
+          id="userGuess"
+          min="1"
+          max="10"
+        >
         <button id="submitGuess">Submit Guess</button>
         <p id="result"></p>
       </section>
@@ -154,14 +159,15 @@
             What's the plan for the rest of the year
           </p>
         </div>
-        <div class="news-cards-container max-w-full mx-auto grid    grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-3" >
+        <div
+          class="news-cards-container max-w-full mx-auto grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-3"
+        >
           <article class="news-card">
             <img
-              
               src="https://images.pexels.com/photos/260352/pexels-photo-260352.jpeg"
               alt="Picture with dumbels"
               data-text="Lorem impedit enim "
-            />
+            >
             <h2>New Weights</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -170,13 +176,14 @@
               quossoluta obcaecati aspernatur dolorum, repudiandae consequuntur!
             </p>
             <a href="#">Read More</a>
-            <div id="description-text"></div>
           </article>
           <article class="news-card">
-            <img 
-            src=https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
-            alt="Picture with weight bar in a room" data-text="Lorem recusandae
-            architecto">
+            <img
+              src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Picture with weight bar in a room"
+              data-text="Lorem recusandae
+            architecto"
+            >
             <h2>New Rooms</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad,
@@ -191,11 +198,10 @@
           </article>
           <article class="news-card">
             <img
-              
               src="https://images.pexels.com/photos/931324/pexels-photo-931324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Picture with man using elevation circles"
               data-text="Lorem perferendis vitae recusandae"
-            />
+            >
             <h2>TRX</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -206,13 +212,11 @@
             <a href="#">Read More</a>
           </article>
           <article class="news-card">
-            <div id="description-text"></div>
             <img
-              
               src="./images/pexels-photo-10810460.jpg"
               alt=" Picture with gym building"
               data-text="Lorem dolorem optiot"
-            />
+            >
             <h2>New Building</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -224,11 +228,10 @@
           </article>
           <article class="news-card">
             <img
-              
               src="https://picsum.photos/600/600?random=1"
               alt="Random pictures using picsum.photos"
               data-text="Lorem dolorem optio"
-            />
+            >
             <h2>Car Park</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
