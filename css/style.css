@@ -558,14 +558,6 @@ details ul li::before {
   .NCI-GYM-container {
     padding-top: 10rem;
   }
-  nav.head-navigation {
-    position: relative;
-  }
-
-  nav.head-navigation ul {
-    display: flex;
-    flex-direction: column;
-  }
 
   section {
     padding: 1rem;

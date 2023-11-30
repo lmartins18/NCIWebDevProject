@@ -13,19 +13,44 @@
   </head>
   <body class="flex flex-col">
     <nav
-      class="head-navigation w-full sticky top-0 flex align-items-center p-4 backdrop-blur-md z-50 text-white hover:no-underline"
-    >
-      <a href="../index.html" class="site-logo font-bold text-xl uppercase"
-        >NCI GYM</a
-      >
-      <ul
-        class="ml-auto uppercase [&>li]:inline-block [&>li]:font-bold [&>li]:mx-3"
-      >
+    class="head-navigation w-full sticky top-0 flex align-items-center p-4 backdrop-blur-md z-50 text-white hover:no-underline"
+  >
+  <a href="./../index.html" class="site-logo font-bold text-xl uppercase">NCI GYM</a>
+  <ul class="hidden md:block ml-auto uppercase [&>li]:inline-block [&>li]:font-bold [&>li]:mx-3">
+    <li><a href="#">Register</a></li>
+    <li><a href="./about.html">About</a></li>
+    <li><a href="./subscription.html">Subscription</a></li>
+  </ul>
+   <!-- Responsive Burger Menu -->
+   <div class="ml-auto md:hidden">
+    <button id="burger-icon" class="text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+    </button>
+</div>
+</nav>
+<!-- Mobile - Side Menu Overlay -->
+<div id="mobile-menu-overlay"
+    class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 hidden lg:hidden z-40">
+    <div class="flex justify-end p-4">
+        <button id="close-icon" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+    </div>
+    <ul class="text-white text-3xl font-bold m-6 flex flex-col gap-6">
         <li><a href="#">Register</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./subscription.html">Subscription</a></li>
-      </ul>
-    </nav>
+    <li><a href="./about.html">About</a></li>
+    <li><a href="./subscription.html">Subscription</a></li>
+    </ul>
+</div>
+    
     <main class="flex-1 p-3 overflow-auto">
       <form
         id="registration-form"
@@ -186,5 +211,6 @@
         </div>
       </div>
     </main>
+    <script src="./../script/script.js"></script>
   </body>
 </html>

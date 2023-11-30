@@ -1,12 +1,21 @@
 // Index page specific.
 // Video autoplay not compatible with safari.
 // If using Safari, remove video.
-if (
-  navigator.vendor == "Apple Computer, Inc."
-) {
+if (navigator.vendor == "Apple Computer, Inc.") {
   document.querySelector("#myVideo")?.remove();
   document.querySelector("#video-poster")?.classList.remove("hidden");
 }
+// navbar
+// JavaScript logic to toggle the mobile menu
+document.getElementById("burger-icon").addEventListener("click", function () {
+  document.getElementById("mobile-menu-overlay").classList.toggle("hidden");
+});
+
+// Close mobile menu when close icon is clicked
+document.getElementById("close-icon").addEventListener("click", function () {
+  document.getElementById("mobile-menu-overlay").classList.add("hidden");
+});
+// end navbar
 document.addEventListener("DOMContentLoaded", function () {
   // Guessing Game
   let randomNumber; // Declare lets
@@ -75,4 +84,4 @@ document.addEventListener("DOMContentLoaded", function () {
     descriptionText.textContent = imageText;
     descriptionText.style.display = "block";
   }
-}); 
+});
