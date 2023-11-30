@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>National College of Ireland Gym - Register</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="tailwind.config.js"></script>
+    <script src="./../tailwind.config.js"></script>
+    <script src="./../script/script.js"></script>
     <link rel="stylesheet" href="./../css/style.css" />
   </head>
   <body class="flex flex-col">
@@ -27,10 +28,12 @@
     <main class="flex-1 p-3 overflow-auto">
       <form
         class="max-w-md mx-auto my-8 p-6 bg-white rounded-md shadow-md my-auto h-100 overflow-auto"
+        onsubmit="validateForm()"
       >
         <h2 class="text-2xl font-semibold text-center mb-4">
           Gym Registration
         </h2>
+
         <div class="grid grid-cols-2 gap-4">
           <div class="mb-4">
             <label
@@ -98,7 +101,7 @@
             class="mt-1 p-2 w-full border rounded-md"
           />
         </div>
-
+        <ul id="passwordErrorList" class="list-disc list-outside mx-3 text-red-500 mb-3"></ul>
         <div class="mb-4">
           <label
             for="phoneNumber"
@@ -140,6 +143,7 @@
 
         <div class="mb-4">
           <div class="flex items-center">
+            <p class="hidden">Terms and Conditions</p>
             <input type="checkbox" id="terms" class="form-checkbox" />
             <label for="terms" class="ml-2 text-sm text-gray-600"
               >I accept the terms and conditions</label
@@ -153,6 +157,8 @@
         >
           Register
         </button>
+        <div id="formMessage" class="mt-4 text-red-500"></div>
+        <ul id="emptyFieldsList" class="list-disc mx-3 text-red-500 list-outside [&>li]:cursor-pointer"></ul>
       </form>
     </main>
   </body>

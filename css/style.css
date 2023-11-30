@@ -199,42 +199,32 @@ table.upcoming-classes-table tr:nth-of-type(odd) {
   animation: explode 0.3s ease-in-out;
 }
 
-/*Forms*/
-
-.form-container {
-  border: 1rem solid black;
+/* Register */
+.error {
+  border: 1px solid red;
 }
 
-.subscribe-form {
-  margin: 0 auto;
-  display: flex;
+.valid {
+  border: 1px solid green;
+}
+.valid::after {
+  content: "\2713"; /* Checkmark Unicode */
+  color: green;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.error-message {
+  color: red;
+  margin-top: 5px;
 }
 
-.subscribe-form > * {
-  color: white;
-  background: rgb(39, 39, 39);
-  padding: 1rem;
-  font-size: 1rem;
-  line-height: 4rem;
-  border: 0;
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
-  outline: 0;
+.valid-message {
+  color: green;
+  margin-top: 5px;
 }
 
-.subscribe-form > :not(label) {
-  width: 100%;
-}
-
-.subscribe-form > input[type="submit"] {
-  background-color: var(--orange-web);
-  text-transform: uppercase;
-}
-
-.subscribe-form > input[type="submit"]:hover {
-  background-color: var(--raspberry);
-  color: white;
-  cursor: pointer;
-}
 
 /*Footer*/
 .home-footer {
@@ -606,7 +596,8 @@ details ul li::before {
 
 /* User input in Number Guessing game is set on white (not visible) , changed to black */
 #userGuess {
-  color: black;}
+  color: black;
+}
 
 /* TODO: organize media queries.
    Subscription page was designed mobile first while others were designed desktop first.
@@ -759,4 +750,3 @@ details ul li::before {
     background-position: 0% 50%;
   }
 }
-
