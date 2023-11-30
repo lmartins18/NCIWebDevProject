@@ -1,147 +1,100 @@
 function validateInput(field) {
-    const input = document.getElementById(field);
-  
-    if (input.value.trim() !== "") {
-      input.classList.remove("error");
-      input.classList.add("valid");
-    } else {
-      input.classList.remove("valid");
-      input.classList.add("error");
-    }
+  const input = document.getElementById(field);
+  input.classList.toggle("valid", input.value.trim() !== "");
+  input.classList.toggle("error", input.value.trim() === "");
+}
+
+function validateCheckbox(field) {
+  const input = document.getElementById(field);
+  input.classList.toggle("valid", input.checked);
+  input.classList.toggle("error", !input.checked);
+}
+
+function validatePassword(fieldOne, fieldTwo) {
+  // Inputs.
+  const passwordInput = document.getElementById(fieldOne);
+  const confirmPasswordInput = document.getElementById(fieldTwo);
+  // Input texts.
+  const passwordText = passwordInput.value;
+  const confirmPasswordText = confirmPasswordInput.value;
+  // Validation
+  const passwordsMatch = passwordText === confirmPasswordText;
+  const isLengthValid = passwordText.length >= 8;
+  const hasSpecialCharacter = /[!@#$%^&*(),.?":{}|<>]/.test(passwordText);
+  const hasNumber = /\d/.test(passwordText);
+  const isPasswordValid = isLengthValid && hasSpecialCharacter && passwordsMatch && hasNumber;
+
+  // Toggle classes.
+  [passwordInput, confirmPasswordInput].forEach((input) => {
+    input.classList.toggle("valid", isPasswordValid);
+    input.classList.toggle("error", !isPasswordValid);
+  });
+
+  return { passwordsMatch, isLengthValid, hasSpecialCharacter, hasNumber };
+}
+
+function passwordErrors({ passwordsMatch, isLengthValid, hasSpecialCharacter, hasNumber }) {
+  const ulElement = document.createElement("ul");
+
+  if (!passwordsMatch) appendErrorMessage(ulElement, "Passwords must match.");
+  if (!isLengthValid) appendErrorMessage(ulElement, "Password must be at least 8 characters long.");
+  if (!hasSpecialCharacter) appendErrorMessage(ulElement, "Password must contain at least one special character.");
+  if(!hasNumber) appendErrorMessage(ulElement, "Password must contain at least one number.");
+
+  return ulElement;
+}
+
+function appendErrorMessage(ulElement, message) {
+  const liElement = document.createElement("li");
+  liElement.textContent = message;
+  ulElement.appendChild(liElement);
+}
+
+function validatePhoneNumber(field) {
+  const input = document.getElementById(field);
+  const phoneNumberRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+  const validPhoneNumber = phoneNumberRegex.test(input.value);
+
+  input.classList.toggle("valid", validPhoneNumber);
+  input.classList.toggle("error", !validPhoneNumber);
+}
+
+function validateForm() {
+  // Prevent form submition.
+  event.preventDefault();
+  // Validate fields.
+  ["firstName", "lastName", "email", "dob", "membership"].forEach(validateInput);
+  validatePhoneNumber("phoneNumber");
+  validateCheckbox("terms");
+  // Validate password.
+  const passwordValidation = validatePassword("password", "confirmPassword");
+  const passwordErrorMessageList = passwordErrors(passwordValidation);
+  // Prepare lists of errors.
+  const invalidInputs = document.querySelectorAll(".error");
+  const formMessage = document.getElementById("formMessage");
+  const passwordMessage = document.getElementById("passwordErrorList");
+  const emptyFieldsList = document.getElementById("emptyFieldsList");
+  // Clear old form errors.
+  formMessage.innerHTML = "";
+  emptyFieldsList.innerHTML = "";
+  passwordMessage.innerHTML = "";
+
+  // Return early if valid.
+  if (invalidInputs.length === 0) {
+    formMessage.innerHTML = '<span class="valid-message">Form submitted successfully!</span>';
+    return;
   }
-  function validateCheckbox(field) {
-    const input = document.getElementById(field);
-    if (input.checked) {
-      input.classList.remove("error");
-      input.classList.add("valid");
-    } else {
-      input.classList.remove("valid");
-      input.classList.add("error");
-    }
+  //  Display password errors.
+  if (passwordErrorMessageList.children.length > 0) {
+    passwordMessage.innerHTML = passwordErrorMessageList.innerHTML;
   }
-  function validatePassword(fieldOne, fieldTwo) {
-    // Inputs
-    const passwordInput = document.getElementById(fieldOne);
-    const confirmPasswordInput = document.getElementById(fieldTwo);
-    // Passwords
-    const passwordText = passwordInput.value;
-    const confirmPasswordText = confirmPasswordInput.value;
-  
-    // Check if passwords match
-    const passwordsMatch = passwordText === confirmPasswordText;
-    // Check if password is at least 8 characters long
-    const isLengthValid = passwordText.length >= 8;
-    // Check if password contains at least one special character
-    const specialCharacterRegex = /[!@#$%^&*(),.?":{}|<>]/;
-    const hasSpecialCharacter = specialCharacterRegex.test(passwordText);
-  
-    validateInput(fieldOne);
-    validateInput(fieldTwo);
-  
-    if (!isLengthValid || !hasSpecialCharacter) {
-      passwordInput.classList.remove("valid");
-      passwordInput.classList.add("error");
-    }
-    if (!passwordsMatch) {
-      passwordInput.classList.remove("valid");
-      passwordInput.classList.add("error");
-      confirmPasswordInput.classList.remove("valid");
-      confirmPasswordInput.classList.add("error");
-    }
-  
-    return { passwordsMatch, isLengthValid, hasSpecialCharacter };
-  }
-  function passwordErrors({
-    passwordsMatch,
-    isLengthValid,
-    hasSpecialCharacter,
-  }) {
-    var ulElement = document.createElement("ul");
-  
-    if (!passwordsMatch) {
-      var liElement = document.createElement("li");
-      liElement.textContent = "Passwords must match.";
-      ulElement.appendChild(liElement);
-    }
-    if (!isLengthValid) {
-      var liElement = document.createElement("li");
-      liElement.textContent = "Password must be at least 8 characters long.";
-      ulElement.appendChild(liElement);
-    }
-    if (!hasSpecialCharacter) {
-      var liElement = document.createElement("li");
-      liElement.textContent =
-        "Password must contain at least one special character.";
-      ulElement.appendChild(liElement);
-    }
-  
-    return ulElement;
-  }
-  function validatePhoneNumber(field) {
-    const input = document.getElementById(field);
-    const phoneNumberRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
-    const validPhoneNumber = phoneNumberRegex.test(input.value);
-    
-    if (validPhoneNumber) {
-      input.classList.remove("error");
-      input.classList.add("valid");
-    } else {
-      input.classList.remove("valid");
-      input.classList.add("error");
-    }
-  }
-  
-  
-  function validateForm() {
-    // First prevent form submition.
-    event.preventDefault();
-    // Validate all inputs except password.
-    validateInput("firstName");
-    validateInput("lastName");
-    validateInput("email");
-    validateInput("dob");
-    validateInput("membership");
-    validatePhoneNumber("phoneNumber");
-    validateCheckbox("terms");
-  
-    // Now validate password strength.
-    const passwordValidation = validatePassword("password", "confirmPassword");
-    const passwordErrorMessageList = passwordErrors(passwordValidation);
-  
-    let invalidInputs = document.querySelectorAll(".error");
-    let formMessage = document.getElementById("formMessage");
-    let passwordMessage = document.getElementById("passwordErrorList");
-    let emptyFieldsList = document.getElementById("emptyFieldsList");
-    emptyFieldsList.innerHTML = "";
-  
-    // Valid form.
-    if (invalidInputs.length == 0) {
-      formMessage.innerHTML =
-        '<span class="valid-message">Form submitted successfully!</span>';
-      // Here
-      return;
-    }
-    // Reset error.
-    formMessage.innerHTML = "";
-    passwordMessage.innerHTML = "";
-    // Validate password.
-    if (passwordErrorMessageList.children.length > 0) {
-      passwordMessage.innerHTML = passwordErrorMessageList.innerHTML;
-    }
-  
-    formMessage.innerHTML +=
-      '<span class="error-message">Please fill in all required fields correctly.</span>';
-  
-    invalidInputs.forEach(function (field) {
-      let listItem = document.createElement("li");
-      listItem.innerHTML = field.previousElementSibling.textContent.replace(
-        ":",
-        ""
-      );
-      listItem.onclick = function () {
-        field.focus();
-      };
-      emptyFieldsList.appendChild(listItem);
-    });
-  }
-  
+  // Display other errors.
+  formMessage.innerHTML = '<span class="error-message">Please fill in all required fields correctly.</span>';
+
+  invalidInputs.forEach((field) => {
+    const listItem = document.createElement("li");
+    listItem.innerHTML = field.previousElementSibling.textContent.replace(":", "");
+    listItem.onclick = () => field.focus();
+    emptyFieldsList.appendChild(listItem);
+  });
+}

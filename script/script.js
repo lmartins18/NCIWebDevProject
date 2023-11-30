@@ -2,11 +2,10 @@
 // Video autoplay not compatible with safari.
 // If using Safari, remove video.
 if (
-  location.pathname === "/index.html" &&
   navigator.vendor == "Apple Computer, Inc."
 ) {
-  document.querySelector("#myVideo").remove();
-  document.querySelector("#video-poster").classList.remove("hidden");
+  document.querySelector("#myVideo")?.remove();
+  document.querySelector("#video-poster")?.classList.remove("hidden");
 }
 document.addEventListener("DOMContentLoaded", function () {
   // Guessing Game

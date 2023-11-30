@@ -207,14 +207,6 @@ table.upcoming-classes-table tr:nth-of-type(odd) {
 .valid {
   border: 1px solid green;
 }
-.valid::after {
-  content: "\2713"; /* Checkmark Unicode */
-  color: green;
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-}
 .error-message {
   color: red;
   margin-top: 5px;
