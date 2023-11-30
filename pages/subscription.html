@@ -1,16 +1,83 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
   <head>
     <meta charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <meta name="description" content="The National College of Ireland gym offers a comprehensive range of fitness equipment, classes, and facilities to support your exercise and well-being goals. From cardio to weight training, our gym has everything you need to achieve your fitness objectives in a welcoming and supportive environment.">
     <title>National College of Ireland Gym - Subscription</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./../tailwind.config.js"></script>
     <link rel="stylesheet" href="./../css/style.css" >
   </head>
-  <body id="subscription-body" >
+  <style>
+    .card {
+      position: relative;
+      width: 100%;
+      max-width: 300px; 
+      height: 400px;
+      perspective: 1000px;
+      margin: 20px;
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+     .card-back {
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       backface-visibility: hidden;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       padding: 20px;
+       box-shadow: 0 4px 8px none;
+       border-radius: 10px;
+       background-color: none;
+       visibility: visible; 
+       transform-style: preserve-3d;
+       transition: transform 0.6s;
+}
+
+
+    .card-back {
+      transform: rotateY(180deg);
+      transform-origin: 50% 50%;
+    }
+
+    .card-back ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    .btn {
+      cursor: pointer;
+    }
+
+    /* Media query for smaller screens */
+    @media screen and (max-width: 900px) {
+      .card {
+        max-width: 100%;
+        margin: 10px;
+      }
+
+      .page-content {
+        flex-direction: column; 
+      }
+    }
+  </style>
+  <body id="subscription-body" class="bg-gray">
     <nav
       class="head-navigation w-full sticky top-0 flex align-items-center p-4 backdrop-blur-md z-50 text-white hover:no-underline"
     >
@@ -25,59 +92,70 @@
         <li><a href="#">Subscription</a></li>
       </ul>
     </nav>
-    <main id="subscription-main" class="page-content">
-      <div class="card">
-        <div class="content">
-          <h2 class="title">Copper Membership</h2>
-          <p class="copy">1 Month</p>
-          <p>50 Euros</p>
-          <details>
-            <summary class="btn">View Benefits</summary>
+    <main id="subscription-main" class="page-content flex justify-center items-center">
+      <div class="card mx-4">
+        <div class="card-inner">
+          <div class="card-front bg-gray">
+            <h2 class="title">Copper Membership</h2>
+            <p class="copy">1 Month</p>
+            <p>50 Euros</p>
+          </div>
+          <div class="card-back bg-gray">
+            <h2 class="title">Copper Membership Benefits</h2>
             <ul>
               <li>Unlimited access to gym facilities</li>
               <li>Free fitness assessment</li>
             </ul>
-          </details>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <div class="content">
-          <h2 class="title">Silver Membership</h2>
-          <p class="copy">1 Month</p>
-          <p>55 Euros</p>
-          <details>
-            <summary class="btn">View Benefits</summary>
+
+      <div class="card mx-4">
+        <div class="card-inner">
+          <div class="card-front bg-gray">
+            <h2 class="title">Silver Membership</h2>
+            <p class="copy">1 Month</p>
+            <p>55 Euros</p>
+          </div>
+          <div class="card-back bg-gray">
+            <h2 class="title">Silver Membership Benefits</h2>
             <ul>
               <li>Access to group fitness classes</li>
               <li>Discounts on personal training sessions</li>
               <li>Complimentary towel service</li>
             </ul>
-          </details>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <div class="content">
-          <h2 class="title">Gold Membership</h2>
-          <p class="copy">1 Month</p>
-          <p>60 Euros</p>
-          <details>
-            <summary class="btn">View Benefits</summary>
+
+      <div class="card mx-4">
+        <div class="card-inner">
+          <div class="card-front bg-gray">
+            <h2 class="title">Gold Membership</h2>
+            <p class="copy">1 Month</p>
+            <p>60 Euros</p>
+          </div>
+          <div class="card-back bg-gray">
+            <h2 class="title">Gold Membership Benefits</h2>
             <ul>
               <li>Exclusive access to premium gym equipment</li>
               <li>Free nutritional consultation</li>
               <li>Unlimited tanning sessions</li>
               <li>Priority class reservations</li>
             </ul>
-          </details>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <div class="content">
-          <h2 class="title">Titanium Membership</h2>
-          <p class="copy">1 Month</p>
-          <p>65 Euros</p>
-          <details>
-            <summary class="btn">View Benefits</summary>
+
+      <div class="card mx-4">
+        <div class="card-inner">
+          <div class="card-front bg-gray">
+            <h2 class="title">Titanium Membership</h2>
+            <p class="copy">1 Month</p>
+            <p>65 Euros</p>
+          </div>
+          <div class="card-back bg-gray">
+            <h2 class="title">Titanium Membership Benefits</h2>
             <ul>
               <li>Access to VIP lounge</li>
               <li>Free massage sessions</li>
@@ -85,9 +163,9 @@
               <li>Discounts on gym merchandise</li>
               <li>Personal locker with laundry service</li>
             </ul>
-          </details>
+          </div>
         </div>
       </div>
-    </main>
+      </main>
   </body>
 </html>
