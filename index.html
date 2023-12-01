@@ -145,7 +145,7 @@
       </section>
       <section class="dark">
         <div class="upcoming-classes-container">
-          <div class="section-header dark">
+          <div class="section-header ">
             <h2 class="section-header__title">Gym Scramble Game</h2>
             <p class="section-header__subtitle flex gap-3">
               <span>Unscramble the word:</span>
@@ -154,9 +154,8 @@
             </div>
           <div class="w-100 overflow-auto">
             <div id="game-container" class="flex flex-col">
-              
-              <input type="text" id="userGuess" placeholder="Enter your guess">
-              <button id="submitGuess">Submit Guess</button>
+              <input type="text" id="userGuess" placeholder="Enter your guess" class="w-full md:w-1/2 mb-3 rounded p-2">
+              <button class="self-start bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id="submitGuess">Submit Guess</button>
             </div>
             <p id="result"></p>
           </div>  

@@ -24,11 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Start the word scramble game
+  let word;
   initializeGame();
 
   function initializeGame() {
     const randomIndex = Math.floor(Math.random() * gymWords.length);
-    const scrambledWord = scrambleWord(gymWords[randomIndex]);
+    word = gymWords[randomIndex];
+    const scrambledWord = scrambleWord(word);
 
     scrambledWordElement.textContent = scrambledWord;
     resultMessage.textContent = "";
@@ -49,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Congratulations! You guessed the correct word!";
     } else {
       resultMessage.textContent =
-        "Sorry, that's not the correct word. Try again!";
+        `Sorry, that's not the correct word, the word was: ${word}. Try again!`;
     }
 
     // Restart the game

@@ -3,7 +3,6 @@
 :root {
   /* color */
   --nyanza: #e9ffdb;
-  --dark-purple: #301934;
   --dark-gradient: linear-gradient(120deg, black, gray);
 }
 
@@ -42,22 +41,6 @@ nav a[href="#"] {
   color: cyan;
 }
 
-nav.head-navigation {
-  width: 100%;
-  position: sticky;
-  top: 0;
-  display: flex;
-  align-items: center;
-  padding: 1rem; /* You may need to adjust the value based on your design */
-  backdrop-filter: blur(10px); /* Adjust the blur value as needed */
-  z-index: 50;
-  color: white;
-  text-decoration: none; /* Assuming you want to remove underlines on hover */
-}
-
-nav.head-navigation:hover {
-  text-decoration: none;
-}
 nav.head-navigation ul li a {
   padding: 0.6em 0 0.6em 0;
   text-decoration: none;
@@ -88,15 +71,13 @@ nav.head-navigation ul li a:hover {
 .NCI-GYM-container__book-button {
   text-transform: uppercase;
   font-size: 1.6rem;
-  color: var(--nyanza);
   border: 1px solid white;
   padding: 0.6em 1.4em;
   transition: transform 0.5s;
 }
 
 .NCI-GYM-container__book-button:hover {
-  color: var(--nyanza);
-  background-color: var(--dark-purple);
+  background-color: black;
   transition: background-color ease-in-out 0.3s;
   text-decoration: none;
   transform: scale(1.06);
@@ -128,7 +109,8 @@ section {
   color: white;
 }
 
-.dark input:not([type="button"]):not([type="submit"]) {
+.dark input:not([type="button"]):not([type="submit"]),
+.dark select {
   color: black;
 }
 
