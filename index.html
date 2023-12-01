@@ -11,76 +11,52 @@
     <link rel="stylesheet" href="./css/style.css" >
   </head>
   <body>
-    <header
-      class="relative w-full min-h-[25rem] h-[100vh] bg-200 animate-gradient-fade NCI-GYM"
-    >
-      <video
-        muted
-        playsinline
-        autoplay
-        id="myVideo"
-        class="hidden md:block w-full h-full absolute object-cover"
-        poster="./images/video-poster.jpg"
-      >
-        <source src="./videos/dumbbells-video.mp4" type="video/mp4" >
-        Your browser does not support the video tag.
+    <header class="relative w-full min-h-[25rem] h-[100vh] bg-200 animate-gradient-fade NCI-GYM">
+      <!-- Overlay -->
+      <div class="absolute w-full h-full top-0 left-0 bg-gray-900/40 z-10 backdrop-filter backdrop-blur-lg"></div>
+      <video muted playsinline autoplay id="myVideo" class="hidden md:block w-full h-full absolute object-cover" poster="./images/video-poster.jpg">
+          <source src="./videos/gym.mp4" type="video/mp4">
+          Your browser does not support the video tag.
       </video>
-      <img
-        id="video-poster"
-        class="block md:hidden w-full h-full absolute object-cover"
-        src="./images/video-poster.jpg"
-        alt="header background dumbbells"
-      >
-      <nav
-        class="head-navigation w-full sticky top-0 flex align-items-center p-4 backdrop-blur-md z-50 text-white hover:no-underline"
-      >
-      <a href="./../index.html" class="site-logo font-bold text-xl uppercase">NCI GYM</a>
-      <ul class="hidden md:block ml-auto uppercase [&>li]:inline-block [&>li]:font-bold [&>li]:mx-3">
-        <li><a href="./pages/register.html">Register</a></li>
-        <li><a href="./pages/about.html">About</a></li>
-        <li><a href="./pages/subscription.html">Subscription</a></li>
-      </ul>
-       <!-- Responsive Burger Menu -->
-       <div class="ml-auto md:hidden">
-        <button id="burger-icon" class="text-white focus:outline-none" aria-label="navbar burger button">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-        </button>
-    </div>
-    </nav>
-    <!-- Mobile - Side Menu Overlay -->
-    <div id="mobile-menu-overlay"
-        class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 hidden lg:hidden z-40">
-        <div class="flex justify-end p-4">
-            <button id="close-icon" class="text-white focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
-        </div>
-        <ul class="text-white text-3xl font-bold m-6 flex flex-col gap-6">
-            <li><a href="./pages/register.html">Register</a></li>
-            <li><a href="./pages/about.html">About</a></li>
-            <li><a href="./pages/subscription.html">Subscription</a></li>
-        </ul>
-    </div>
-      <div
-        class="NCI-GYM-container opacity-100 animate-slide-in-below min-h-[60vh] flex flex-col items-center justify-center px-32 py-60 text-white [&>*]:z-10"
-      >
-        <h1 class="NCI-GYM-container__title text-center">NCI GYM</h1>
-        <p class="NCI-GYM-container__subtitle text-center">
-          National College of Ireland's best gym
-        </p>
-        <a class="NCI-GYM-container__book-button" href="./Pages/register.html"
-          >Register Now</a
-        >
+      <img id="video-poster" class="block md:hidden w-full h-full absolute object-cover z-40" src="./images/video-poster.jpg" alt="header background dumbbells">
+      <nav class="head-navigation w-full sticky top-0 flex align-items-center p-4 backdrop-blur-md z-50 text-white hover:no-underline">
+          <a href="./../index.html" class="site-logo font-bold text-xl uppercase">NCI GYM</a>
+          <ul class="hidden md:block ml-auto uppercase [&>li]:inline-block [&>li]:font-bold [&>li]:mx-3">
+              <li><a href="./pages/register.html">Register</a></li>
+              <li><a href="./pages/about.html">About</a></li>
+              <li><a href="./pages/subscription.html">Subscription</a></li>
+          </ul>
+          <!-- Responsive Burger Menu -->
+          <div class="ml-auto md:hidden">
+              <button id="burger-icon" class="text-white focus:outline-none" aria-label="navbar burger button">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                  </svg>
+              </button>
+          </div>
+      </nav>
+      <!-- Mobile - Side Menu Overlay -->
+      <div id="mobile-menu-overlay" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 hidden lg:hidden z-40">
+          <div class="flex justify-end p-4">
+              <button id="close-icon" class="text-white focus:outline-none">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+              </button>
+          </div>
+          <ul class="text-white text-3xl font-bold m-6 flex flex-col gap-6">
+              <li><a href="./pages/register.html">Register</a></li>
+              <li><a href="./pages/about.html">About</a></li>
+              <li><a href="./pages/subscription.html">Subscription</a></li>
+          </ul>
       </div>
-    </header>
+      <div class="NCI-GYM-container opacity-100 animate-slide-in-below min-h-[60vh] flex flex-col items-center justify-center px-32 py-60 text-white z-50 relative [&>*]:z-50">
+          <h1 class="NCI-GYM-container__title text-center">NCI GYM</h1>
+          <p class="NCI-GYM-container__subtitle text-center">National College of Ireland's best gym</p>
+          <a class="NCI-GYM-container__book-button" href="./Pages/register.html">Register Now</a>
+      </div>
+  </header>
+  
     <main>
       <section class="dark">
         <div class="upcoming-classes-container">
@@ -135,7 +111,7 @@
         <div class="mt-6">
           <form class="subscribe-form flex flex-col md:flex-row gap-3" action="#">
             <label for="date">Date:</label>
-            <select id="date" name="date" class="text-black" required>
+            <select id="date" name="date"  required>
               <option value="">Select a date</option>
               <option value="1">1/12/2023</option>
               <option value="2">2/12/2023</option>
@@ -167,21 +143,26 @@
             <input type="submit" value="Book Class" >
           </form>
         </div>
-        <p class="text-lg">Number Guessing Game</p>
-        <p>Guess a number between 1 and 10:</p>
-        <label for="guess">Phone</label>
-        <input
-          id="guess"
-          name="guess"
-          type="number"
-          class="text-black"
-          id="userGuess"
-          min="1"
-          max="10"
-        >
-        <button id="submitGuess">Submit Guess</button>
-        <p id="result"></p>
       </section>
+      <section class="dark">
+        <div class="upcoming-classes-container">
+          <div class="section-header dark">
+            <h2 class="section-header__title">Gym Scramble Game</h2>
+            <p class="section-header__subtitle flex gap-3">
+              <span>Unscramble the word:</span>
+              <span id="scrambled-word" class="text-2xl text-sky-500"></span>
+            </p>
+            </div>
+          <div class="w-100 overflow-auto">
+            <div id="game-container" class="flex flex-col">
+              
+              <input type="text" id="userGuess" placeholder="Enter your guess">
+              <button id="submitGuess">Submit Guess</button>
+            </div>
+            <p id="result"></p>
+          </div>  
+        </div>
+      </section>  
       <section class="dark">
         <div class="section-header">
           <h2 class="section-header__title">News</h2>

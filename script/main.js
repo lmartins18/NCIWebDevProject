@@ -1,12 +1,3 @@
-// Check if the browser is Safari and remove video if true
-if (navigator.vendor === "Apple Computer, Inc.") {
-  const video = document.querySelector("#myVideo");
-  const videoPoster = document.querySelector("#video-poster");
-  
-  if (video) video.remove();
-  if (videoPoster) videoPoster.classList.remove("hidden");
-}
-
 // Navbar functionality
 const burgerIcon = document.getElementById("burger-icon");
 const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");

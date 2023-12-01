@@ -33,9 +33,9 @@ img,
 picture {
   max-width: 100%;
 }
-nav a[href="#"] { 
+nav a[href="#"] {
   color: cyan;
-} 
+}
 
 nav.head-navigation ul li a {
   padding: 0.6em 0 0.6em 0;
@@ -103,7 +103,11 @@ section {
 
 .dark {
   background: var(--dark-gradient);
-  color: white !important;
+  color: white;
+}
+
+.dark input:not([type="button"]):not([type="submit"]) {
+  color: black;
 }
 
 .note {
@@ -538,7 +542,7 @@ details ul li::before {
   content: "•";
   margin-right: 0.5rem;
 }
- 
+
 @media (max-width: 760px) {
   table.upcoming-classes-table th,
   table.upcoming-classes-table td {
@@ -547,14 +551,13 @@ details ul li::before {
 }
 
 @media (max-width: 600px) {
-  
   .card {
     max-width: 100%;
     margin: 10px;
   }
 
   .page-content {
-    flex-direction: column; 
+    flex-direction: column;
   }
 
   .NCI-GYM-container {
@@ -594,7 +597,7 @@ details ul li::before {
     grid-template-columns: repeat(4, 1fr);
   }
 }
- 
+
 @media (hover: hover) and (min-width: 600px) {
   .card:after {
     transform: translateY(0);
@@ -688,12 +691,11 @@ details ul li::before {
   }
 }
 
-
 /* New */
 .card {
   position: relative;
   width: 100%;
-  max-width: 300px; 
+  max-width: 300px;
   height: 400px;
   perspective: 1000px;
   margin: 20px;
@@ -711,24 +713,23 @@ details ul li::before {
 }
 
 .card-front,
- .card-back {
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   backface-visibility: hidden;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   padding: 20px;
-   box-shadow: 0 4px 8px none;
-   border-radius: 10px;
-   background-color: none;
-   visibility: visible; 
-   transform-style: preserve-3d;
-   transition: transform 0.6s;
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px none;
+  border-radius: 10px;
+  background-color: none;
+  visibility: visible;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
 }
-
 
 .card-back {
   transform: rotateY(180deg);
@@ -740,5 +741,3 @@ details ul li::before {
   padding: 0;
   text-align: center;
 }
-
-

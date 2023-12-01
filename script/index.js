@@ -1,57 +1,74 @@
-
 // Execute when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
+  // Check if the browser is Safari and remove video if true
+  if (navigator.vendor === "Apple Computer, Inc.") {
+    const video = document.querySelector("#myVideo");
+    const videoPoster = document.querySelector("#video-poster");
 
-    // Elements
-    const userGuessInput = document.getElementById("userGuess");
-    const submitGuessButton = document.getElementById("submitGuess");
-    const resultMessage = document.getElementById("result");
-    
-    // Fields
-    let randomNumber;
-  
-    // Add click event
+    if (video) video.remove();
+    if (videoPoster) videoPoster.classList.remove("md:hidden");
+  }
+
+  // Gym Word Scramble Game
+  const gymWords = ["fitness", "exercise", "strength", "workout", "nutrition"];
+
+  // Elements
+  const scrambledWordElement = document.getElementById("scrambled-word");
+  const userGuessInput = document.getElementById("userGuess");
+  const submitGuessButton = document.getElementById("submitGuess");
+  const resultMessage = document.getElementById("result");
+
+  // Add click event
+  if (submitGuessButton) {
     submitGuessButton.addEventListener("click", checkGuess);
-    // Start the guessing game
-    initializeGame();
-  
-    function initializeGame() {
-      resultMessage.textContent = "";
-      randomNumber = Math.floor(Math.random() * 10) + 1;
+  }
+
+  // Start the word scramble game
+  initializeGame();
+
+  function initializeGame() {
+    const randomIndex = Math.floor(Math.random() * gymWords.length);
+    const scrambledWord = scrambleWord(gymWords[randomIndex]);
+
+    scrambledWordElement.textContent = scrambledWord;
+    resultMessage.textContent = "";
+  }
+
+  function scrambleWord(word) {
+    return word
+      .split("")
+      .sort(() => Math.random() - 0.5)
+      .join("");
+  }
+
+  function checkGuess() {
+    const userGuess = userGuessInput?.value.toLowerCase();
+
+    if (gymWords.includes(userGuess)) {
+      resultMessage.textContent =
+        "Congratulations! You guessed the correct word!";
+    } else {
+      resultMessage.textContent =
+        "Sorry, that's not the correct word. Try again!";
     }
-  
-    function checkGuess() {
-      const userGuess = parseInt(userGuessInput?.value);
-  
-      if (!isNaN(userGuess) && userGuess >= 1 && userGuess <= 10) {
-        if (userGuess === randomNumber) {
-          resultMessage.textContent =
-            "Congratulations! You guessed the correct number!";
-          setTimeout(initializeGame, 1500);
-        } else {
-          resultMessage.textContent = `Sorry, the correct number was ${randomNumber}. Try again!`;
-          randomNumber = Math.floor(Math.random() * 10) + 1;
-        }
-      } else {
-        resultMessage.textContent =
-          "Please enter a valid number between 1 and 10.";
-      }
-    }
-  
-    // News Cards
-    const descriptionText = document.getElementById("description-text");
-    const newsCardImages = document.querySelectorAll(".news-card__image");
-  
-    if (newsCardImages) {
-      newsCardImages.forEach(function (image) {
-        image.addEventListener("click", showImageText);
-      });
-    }
-  
-    function showImageText(event) {
-      const imageText = event.target.getAttribute("data-text");
-      descriptionText.textContent = imageText;
-      descriptionText.style.display = "block";
-    }
-  });
-  
+
+    // Restart the game
+    setTimeout(initializeGame, 1500);
+  }
+
+  // News Cards
+  const descriptionText = document.getElementById("description-text");
+  const newsCardImages = document.querySelectorAll(".news-card__image");
+
+  if (newsCardImages) {
+    newsCardImages.forEach(function (image) {
+      image.addEventListener("click", showImageText);
+    });
+  }
+
+  function showImageText(event) {
+    const imageText = event.target.getAttribute("data-text");
+    descriptionText.textContent = imageText;
+    descriptionText.style.display = "block";
+  }
+});
