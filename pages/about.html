@@ -1,126 +1,82 @@
 <!DOCTYPE html>
-<html lang="zxx">
-  <head>
-    <meta charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <meta name="description" content="The National College of Ireland gym offers a comprehensive range of fitness equipment, classes, and facilities to support your exercise and well-being goals. From cardio to weight training, our gym has everything you need to achieve your fitness objectives in a welcoming and supportive environment.">
-    <title>National College of Ireland Gym - About</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./../tailwind.config.js"></script>
-    <link rel="stylesheet" href="./../css/style.css" >
-  </head>
-  <body class="flex flex-col">
-    <nav
-    class="head-navigation w-full sticky top-0 flex align-items-center p-4 backdrop-blur-md z-50 text-white hover:no-underline"
-  >
-  <a href="./../index.html" class="site-logo font-bold text-xl uppercase">NCI GYM</a>
-  <ul class="hidden md:block ml-auto uppercase [&>li]:inline-block [&>li]:font-bold [&>li]:mx-3">
-    <li><a href="./register.html">Register</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="./subscription.html">Subscription</a></li>
-  </ul>
-   <!-- Responsive Burger Menu -->
-   <div class="ml-auto md:hidden">
-    <button id="burger-icon" class="text-white focus:outline-none" aria-label="navbar burger button">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-    </button>
-</div>
-</nav>
-<!-- Mobile - Side Menu Overlay -->
-<div id="mobile-menu-overlay"
-    class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 hidden lg:hidden z-40">
-    <div class="flex justify-end p-4">
-        <button id="close-icon" class="text-white focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-        </button>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Gym Name - About</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./../css/style.css">
+</head>
+<body class="dark">
+  <!-- Navigation Section -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Your Gym Name</a>
+      <!-- Add your navigation links if needed -->
     </div>
-    <ul class="text-white text-3xl font-bold m-6 flex flex-col gap-6">
-      <li><a href="./register.html">Register</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="./subscription.html">Subscription</a></li>
-    </ul>
-</div>
-    <main class="flex flex-1">
-      <section class="flex justify-center flex-1">
-        <div class="mx-auto max-w-2xl lg:max-w-5xl">
-          <div
-            class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12"
-          >
-            <div class="lg:pl-20 mx-auto">
-              <div class="max-w-md m-4 lg:max-w-none">
-                <img
-                  width="800"
-                  height="800"
-                  decoding="async"
-                  data-nimg="1"
-                  class="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover z-0 ring-4 ring-white"
-                  src="./../images/man-running.webp"
-                  alt="man running on treadmill."
-                >
-              </div>
-            </div>
-            <div class="lg:order-first lg:row-span-2">
-              <h1
-                class="text-4xl font-bold tracking-tight sm:text-5xl text-white"
-              >
-                Get to know more about NCI Gym
-              </h1>
-              <div class="mt-6 space-y-7 text-white">
-                <p>
-                  Step into NCI Gym, where fitness meets community in the heart
-                  of our city!
-                </p>
-                <p>
-                  Our top-notch facility welcomes everyone, offering a variety
-                  of workouts from intense training to soothing yoga, ensuring
-                  there's something for every fitness level.
-                </p>
-                <p>
-                  But here at NCI Gym, we're more than just a place to break a
-                  sweat.
-                </p>
-                <p>
-                  We're a community, a family that supports you on your fitness
-                  journey.
-                </p>
-                <p>
-                  Our friendly staff is always ready to help, making sure your
-                  workout isn't just effective but also fun.
-                </p>
-                <p>
-                  Dive into our group classes – a mix of high-energy activities
-                  for all levels – creating a sense of togetherness among our
-                  members.
-                </p>
-                <p>
-                  And it's not just about the workout; we believe in a complete
-                  approach to well-being.
-                </p>
-                <p>
-                  That's why we offer nutrition counseling to complement your
-                  fitness routine.
-                </p>
-                <p>
-                  Join us at NCI Gym, where we're not just about exercise; we're
-                  about building a community that cheers you on every step of
-                  the way.
-                </p>
-                <p>Your path to a healthier, happier you starts right here!</p>
-              </div>
-            </div>
-          </div>
+  </nav>
+
+  <!-- Main Content Section -->
+  <main class="container mt-4 bg-transparent">
+    <section class="row">
+      <div class="col-lg-6">
+        <!-- Image Section -->
+        <img src="./../images/man-running.webp" alt="Gym Image" class="img-fluid rounded border border-white">
+      </div>
+      <div class="col-lg-6">
+        <!-- Content Section -->
+        <div class="mt-4">
+          <h1 class="mb-3">About Our Gym</h1>
+          <p>
+            Step into NCI Gym, where fitness meets community in the heart
+            of our city!
+          </p>
+          <p>
+            Our top-notch facility welcomes everyone, offering a variety
+            of workouts from intense training to soothing yoga, ensuring
+            there's something for every fitness level.
+          </p>
+          <p>
+            But here at NCI Gym, we're more than just a place to break a
+            sweat.
+          </p>
+          <p>
+            We're a community, a family that supports you on your fitness
+            journey.
+          </p>
+          <p>
+            Our friendly staff is always ready to help, making sure your
+            workout isn't just effective but also fun.
+          </p>
+          <p>
+            Dive into our group classes – a mix of high-energy activities
+            for all levels – creating a sense of togetherness among our
+            members.
+          </p>
+          <p>
+            And it's not just about the workout; we believe in a complete
+            approach to well-being.
+          </p>
+          <p>
+            That's why we offer nutrition counseling to complement your
+            fitness routine.
+          </p>
+          <p>
+            Join us at NCI Gym, where we're not just about exercise; we're
+            about building a community that cheers you on every step of
+            the way.
+          </p>
+          <p>Your path to a healthier, happier you starts right here!</p>
         </div>
-      </section>
-    </main>
-    <script src="./../script/main.js" async></script>
-  </body>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bootstrap JS and Popper.js (required for Bootstrap components) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Your custom JS if needed -->
+  <script src="path/to/your/custom.js"></script>
+</body>
 </html>
