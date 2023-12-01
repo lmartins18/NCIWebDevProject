@@ -1,1 +1,20 @@
-const burgerIcon=document.getElementById("burger-icon"),mobileMenuOverlay=document.getElementById("mobile-menu-overlay"),closeIcon=document.getElementById("close-icon");function toggleMobileMenu(){mobileMenuOverlay.classList.toggle("hidden")}function closeMobileMenu(){mobileMenuOverlay.classList.add("hidden")}burgerIcon&&burgerIcon.addEventListener("click",toggleMobileMenu),closeIcon&&closeIcon.addEventListener("click",closeMobileMenu);
+// Navbar functionality
+const burgerIcon = document.getElementById("burger-icon");
+const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
+const closeIcon = document.getElementById("close-icon");
+
+if (burgerIcon) {
+  burgerIcon.addEventListener("click", toggleMobileMenu);
+}
+
+if (closeIcon) {
+  closeIcon.addEventListener("click", closeMobileMenu);
+}
+
+function toggleMobileMenu() {
+  mobileMenuOverlay.classList.toggle("hidden");
+}
+
+function closeMobileMenu() {
+  mobileMenuOverlay.classList.add("hidden");
+}
