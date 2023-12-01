@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap');
 :root {
-  /* color */
-  --nyanza: #e9ffdb;
   --dark-gradient: linear-gradient(120deg, black, gray);
 }
 
@@ -137,10 +135,12 @@ section {
   -o-object-fit: cover;
   object-fit: cover;
   margin-bottom: 2rem;
+  border: 2px orange solid;
 }
 
 .news-card h2 {
   margin: 0 0 1rem 0;
+
 }
 
 .news-card p {
@@ -154,19 +154,18 @@ section {
   content: "...";
 }
 
-.news-card a {
+.news-card button {
+  border: 1px solid orange;
   width: -moz-fit-content;
   width: fit-content;
   padding: 1em 0.8em;
-  border: 1px solid var(--nyanza);
   display: block;
   margin-top: auto;
   transition: 0.3s;
 }
 
 .news-card a:hover {
-  border: 1px solid var(--);
-  background: var(--orange-web);
+  border: 1px solid black;
   color: white;
   transition: 0.3s;
 }
@@ -203,7 +202,7 @@ table.upcoming-classes-table tr:nth-of-type(odd) {
 .home-footer {
   background-color: black;
   color: white;
-  padding: 4rem;
+  padding: 1.5rem 2rem;
 }
 /* Subscription */
 main#subscription-main {

@@ -54,23 +54,50 @@ document.addEventListener("DOMContentLoaded", function () {
         `Sorry, that's not the correct word, the word was: ${word}. Try again!`;
     }
 
-    // Restart the game
+    // Restart the game.
     setTimeout(initializeGame, 1500);
   }
 
-  // News Cards
-  const descriptionText = document.getElementById("description-text");
-  const newsCardImages = document.querySelectorAll(".news-card__image");
+  // News Cards/Modal.
+  const modal = document.getElementById('news-modal');
+  const modalImage = document.getElementById('modal-img');
+  const modalTitle = document.getElementById('modal-title');
+  const modalBody = document.getElementById('modal-body');
+  const closeModalBtn = document.getElementById('close-modal-button');
 
-  if (newsCardImages) {
-    newsCardImages.forEach(function (image) {
-      image.addEventListener("click", showImageText);
+  // Function to open modal
+  function openModal(imageSrc, title, content) {
+    modalImage.src = imageSrc;
+    modalTitle.textContent = title;
+    modalBody.textContent = content;
+    toggleModal();
+  }
+
+  // Function to close modal.
+  function toggleModal() {
+    modal.classList.toggle('hidden');
+  }
+
+  // Attach click event to "Read More" links.
+  const readMoreBtns = document.querySelectorAll('.read-more-btn');
+  readMoreBtns.forEach(function (readMoreBtn, index) {
+    readMoreBtn.addEventListener('click', function (e) {
+      const articleId = 'article' + (index + 1); // Assuming the IDs are "news1", "news2", ...
+      const article = document.getElementById(articleId);
+      const imageSrc = article.querySelector('img').src;
+      const title = article.querySelector('h2').textContent;
+      const content = article.querySelector('h6').textContent;
+      openModal(imageSrc, title, content);
     });
-  }
+  });
 
-  function showImageText(event) {
-    const imageText = event.target.getAttribute("data-text");
-    descriptionText.textContent = imageText;
-    descriptionText.style.display = "block";
-  }
+  // Attach click event to close button.
+  closeModalBtn.addEventListener('click', toggleModal);
+
+  // Close modal when clicking outside the modal content.
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) {
+      toggleModal();
+    }
+  }); 
 });

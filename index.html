@@ -1,61 +1,116 @@
 <!DOCTYPE html>
 <html lang="zxx">
   <head>
-    <meta charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <meta name="description" content="The National College of Ireland gym offers a comprehensive range of fitness equipment, classes, and facilities to support your exercise and well-being goals. From cardio to weight training, our gym has everything you need to achieve your fitness objectives in a welcoming and supportive environment.">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The National College of Ireland gym offers a comprehensive range of fitness equipment, classes, and facilities to support your exercise and well-being goals. From cardio to weight training, our gym has everything you need to achieve your fitness objectives in a welcoming and supportive environment."
+    />
     <title>National College of Ireland Gym</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
-    <link rel="stylesheet" href="./css/style.css" >
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="relative w-full min-h-[25rem] h-[100vh] bg-200 animate-gradient-fade NCI-GYM">
+    <header
+      class="relative w-full min-h-[25rem] h-[100vh] bg-200 animate-gradient-fade NCI-GYM"
+    >
       <!-- Overlay -->
-      <div class="absolute w-full h-full top-0 left-0 bg-gray-900/40 z-10 backdrop-filter backdrop-blur-lg"></div>
-      <video muted playsinline autoplay id="myVideo" class="hidden md:block w-full h-full absolute object-cover" poster="./images/video-poster.png">
-          <source src="./videos/gym.mp4" type="video/mp4">
-          Your browser does not support the video tag.
+      <div
+        class="absolute w-full h-full top-0 left-0 bg-gray-900/40 z-10 backdrop-filter backdrop-blur-lg"
+      ></div>
+      <video
+        muted
+        playsinline
+        autoplay
+        id="myVideo"
+        class="hidden md:block w-full h-full absolute object-cover"
+        poster="./images/video-poster.png"
+      >
+        <source src="./videos/gym.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
-      <nav class="head-navigation w-full sticky top-0 flex align-items-center p-4 backdrop-blur-md z-50 text-white hover:no-underline">
-          <a href="./../index.html" class="site-logo font-bold text-xl uppercase">NCI GYM</a>
-          <ul class="hidden md:block ml-auto uppercase [&>li]:inline-block [&>li]:font-bold [&>li]:mx-3">
-              <li><a href="./pages/register.html">Register</a></li>
-              <li><a href="./pages/about.html">About</a></li>
-              <li><a href="./pages/subscription.html">Subscription</a></li>
-          </ul>
-          <!-- Responsive Burger Menu -->
-          <div class="ml-auto md:hidden">
-              <button id="burger-icon" class="text-white focus:outline-none" aria-label="navbar burger button">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                  </svg>
-              </button>
-          </div>
+      <nav
+        class="head-navigation w-full sticky top-0 flex align-items-center p-4 backdrop-blur-md z-50 text-white hover:no-underline"
+      >
+        <a href="./../index.html" class="site-logo font-bold text-xl uppercase"
+          >NCI GYM</a
+        >
+        <ul
+          class="hidden md:block ml-auto uppercase [&>li]:inline-block [&>li]:font-bold [&>li]:mx-3"
+        >
+          <li><a href="./pages/register.html">Register</a></li>
+          <li><a href="./pages/about.html">About</a></li>
+          <li><a href="./pages/subscription.html">Subscription</a></li>
+        </ul>
+        <!-- Responsive Burger Menu -->
+        <div class="ml-auto md:hidden">
+          <button
+            id="burger-icon"
+            class="text-white focus:outline-none"
+            aria-label="navbar burger button"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
       </nav>
       <!-- Mobile - Side Menu Overlay -->
-      <div id="mobile-menu-overlay" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 hidden lg:hidden z-50">
-          <div class="flex justify-end p-4">
-              <button id="close-icon" class="text-white focus:outline-none">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                  </svg>
-              </button>
-          </div>
-          <ul class="text-white text-3xl font-bold m-6 flex flex-col gap-6">
-              <li><a href="./pages/register.html">Register</a></li>
-              <li><a href="./pages/about.html">About</a></li>
-              <li><a href="./pages/subscription.html">Subscription</a></li>
-          </ul>
+      <div
+        id="mobile-menu-overlay"
+        class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 hidden lg:hidden z-50"
+      >
+        <div class="flex justify-end p-4">
+          <button id="close-icon" class="text-white focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="text-white text-3xl font-bold m-6 flex flex-col gap-6">
+          <li><a href="./pages/register.html">Register</a></li>
+          <li><a href="./pages/about.html">About</a></li>
+          <li><a href="./pages/subscription.html">Subscription</a></li>
+        </ul>
       </div>
-      <div class="NCI-GYM-container opacity-100 animate-slide-in-below min-h-[60vh] flex flex-col items-center justify-center text-white z-40 relative [&>*]:z-40">
-          <h1 class="NCI-GYM-container__title text-center">NCI GYM</h1>
-          <p class="NCI-GYM-container__subtitle text-center">National College of Ireland's best gym</p>
-          <a class="NCI-GYM-container__book-button" href="./Pages/register.html">Register Now</a>
+      <div
+        class="NCI-GYM-container opacity-100 animate-slide-in-below min-h-[60vh] flex flex-col items-center justify-center text-white z-40 relative [&>*]:z-40"
+      >
+        <h1 class="NCI-GYM-container__title text-center">NCI GYM</h1>
+        <p class="NCI-GYM-container__subtitle text-center">
+          National College of Ireland's best gym
+        </p>
+        <a class="NCI-GYM-container__book-button" href="./Pages/register.html"
+          >Register Now</a
+        >
       </div>
-  </header>
-  
+    </header>
+
     <main>
       <section class="dark">
         <div class="upcoming-classes-container">
@@ -108,9 +163,12 @@
           <p class="note">Note: Refer to map in main lobby if needed</p>
         </div>
         <div class="mt-6">
-          <form class="subscribe-form flex flex-col md:flex-row gap-3" action="#">
+          <form
+            class="subscribe-form flex flex-col md:flex-row gap-3"
+            action="#"
+          >
             <label for="date">Date:</label>
-            <select id="date" name="date"  required>
+            <select id="date" name="date" required>
               <option value="">Select a date</option>
               <option value="1">1/12/2023</option>
               <option value="2">2/12/2023</option>
@@ -127,7 +185,7 @@
               required
               minlength="1"
               placeholder="e.g John Doe"
-            >
+            />
 
             <label for="m">Phone</label>
             <input
@@ -137,30 +195,40 @@
               required
               minlength="9"
               placeholder="e.g 0812345678"
-            >
+            />
 
-            <input type="submit" value="Book Class" >
+            <input type="submit" value="Book Class" />
           </form>
         </div>
       </section>
       <section class="dark">
         <div class="upcoming-classes-container">
-          <div class="section-header ">
+          <div class="section-header">
             <h2 class="section-header__title">Gym Scramble Game</h2>
             <p class="section-header__subtitle flex gap-3">
               <span>Unscramble the word:</span>
               <span id="scrambled-word" class="text-2xl text-sky-500"></span>
             </p>
-            </div>
+          </div>
           <div class="w-100 overflow-auto">
             <div id="game-container" class="flex flex-col">
-              <input type="text" id="userGuess" placeholder="Enter your guess" class="w-full md:w-1/2 mb-3 rounded p-2">
-              <button class="self-start bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id="submitGuess">Submit Guess</button>
+              <input
+                type="text"
+                id="userGuess"
+                placeholder="Enter your guess"
+                class="w-full md:w-1/2 mb-3 rounded p-2"
+              />
+              <button
+                class="self-start bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                id="submitGuess"
+              >
+                Submit Guess
+              </button>
             </div>
             <p id="result"></p>
-          </div>  
+          </div>
         </div>
-      </section>  
+      </section>
       <section class="dark">
         <div class="section-header">
           <h2 class="section-header__title">News</h2>
@@ -171,93 +239,195 @@
         <div
           class="news-cards-container max-w-full mx-auto grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-3"
         >
-          <article class="news-card">
+          <article class="news-card" id="article1">
             <img
               src="https://images.pexels.com/photos/260352/pexels-photo-260352.jpeg"
               alt="Picture with dumbels"
               loading="lazy"
               data-text="Lorem impedit enim "
-            >
+            />
             <h2>New Weights</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Inventore aliquam nisi adipisci distinctio delectus repellat
-              similique molestias excepturi veritatis ipsam, tenetur est illum
-              quossoluta obcaecati aspernatur dolorum, repudiandae consequuntur!
+              Revolutionize your workouts with the latest-gen weights - they're
+              about to redefine the game for both newbies and gym pros alike!
             </p>
-            <a href="#">Read More</a>
+            <h6 class="hidden">
+              These weights aren't your average gear; they're the cool kids on
+              the block. Picture this: a sleek design, customizable resistance,
+              and yes, they're smart. Sync them with your tech for real-time
+              feedback on your killer form. Tough as nails yet stylish, these
+              weights are your new workout BFFs. Whether you're just starting or
+              a fitness fanatic, these bad boys are here to level up your
+              strength training. It's not just lifting; it's lifting smarter and
+              looking damn good doing it. Ready to join the future of fitness?
+              These weights are waiting for your power move!
+            </h6>
+            <button class="read-more-btn">Read More</button>
           </article>
-          <article class="news-card">
+          <article class="news-card" id="article2">
             <img
               loading="lazy"
               src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Picture with weight bar in a room"
               data-text="Lorem recusandae
             architecto"
-            >
+            />
             <h2>New Rooms</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad,
-              culpa, maiores impedit enim doloribus perferendis vitae recusandae
-              architecto, ea quidem eveniet quis quas. Molestiae obcaecati quam
-              dolorem optio eum! Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Rem ad, culpa, maiores impedit enim doloribus
-              perferendis vitae recusandae architecto, ea quidem eveniet quis
-              quas. Molestiae obcaecati quam dolorem optio eum!
+              Step into the future of living with the unveiling of cutting-edge
+              rooms that are set to redefine your space. Whether you're a design
+              enthusiast or just craving
             </p>
-            <a href="#">Read More</a>
+            <h6 class="hidden">
+              Picture this: rooms that aren't just functional but works of art
+              in themselves. The latest in room design brings together
+              aesthetics and practicality seamlessly. Say goodbye to the mundane
+              and hello to spaces that inspire. These rooms aren't just about
+              furniture; they're a lifestyle upgrade. From smart lighting to
+              modular furniture, every inch is crafted with an eye for
+              innovation. Need a cozy nook for reading? Check. Want your room to
+              adapt to your mood? Double-check. These spaces are a fusion of
+              comfort and technology, creating an ambiance that suits your every
+              whim. And it's not just about looks – these rooms are designed for
+              efficiency too. Storage solutions that make Marie Kondo proud and
+              layouts that maximize every inch of your space. It's like having a
+              personal interior designer, but way more accessible. Whether
+              you're moving into a new place or just looking to revamp, these
+              rooms are a game-changer. Get ready to redefine your living space
+              and make every corner a reflection of your style and
+              functionality. The future of rooms is here, and it's time to step
+              into a living experience like never before!
+            </h6>
+            <button class="read-more-btn">Read More</button>
           </article>
-          <article class="news-card">
+          <article class="news-card" id="article3">
             <img
               loading="lazy"
               src="https://images.pexels.com/photos/931324/pexels-photo-931324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Picture with man using elevation circles"
               data-text="Lorem perferendis vitae recusandae"
-            >
+            />
             <h2>TRX</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus nemo odit ab est, consequatur voluptate rem iusto.
-              Dolore explicabo, veniam quas esse quasi, veritatis in sed porro
-              amet vitae exercitationem.
+              Get ready to kick your fitness routine up a notch with the latest
+              sensation in training – TRX! Whether you're a workout warrior or a
+              total newbie, TRX is here to
             </p>
-            <a href="#">Read More</a>
+            <h6 class="hidden">
+              TRX, short for Total Resistance Exercise, is not your typical
+              workout – it's a game-changer. Using suspension straps, this
+              system leverages your body weight to build strength, stability,
+              and flexibility. It's like having a personal gym that goes
+              wherever you go. What's the secret sauce? It's all about engaging
+              those stabilizing muscles. From squats to push-ups, every move
+              becomes a full-body challenge. And the best part? It's scalable.
+              Whether you're a fitness guru or just starting, you control the
+              intensity by adjusting your body position. But TRX isn't just
+              about sweat and muscle burn; it's about versatility. Take it
+              outdoors, set it up at home, or spice up your gym routine – TRX
+              goes where you go. With a focus on functional movements, it's not
+              just about looking strong; it's about being strong in every aspect
+              of your life. Ready to take your workouts to new heights? TRX is
+              your ticket. Say goodbye to boring reps and hello to a dynamic,
+              total-body workout that's as challenging as it is fun. Get ready
+              to hang tough and unleash the power of TRX in your fitness
+              journey!
+            </h6>
+            <button class="read-more-btn">Read More</button>
           </article>
-          <article class="news-card">
+          <article class="news-card" id="article4">
             <img
               loading="lazy"
               src="./images/pexels-photo-10810460.jpg"
               alt=" Picture with gym building"
               data-text="Lorem dolorem optiot"
-            >
+            />
             <h2>New Building</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus nemo odit ab est, consequatur voluptate rem iusto.
-              Dolore explicabo, veniam quas esse quasi, veritatis in sed porro
-              amet vitae exercitationem.
+              Embark on a fitness journey like never before as NCI Gym proudly
+              unveils its state-of-the-art facility, a testament to our
+              commitment to elevating
             </p>
-            <a href="#">Read More</a>
+            <h6 class="hidden">
+              NCI GYM's new building is a fitness revolution at the heart of the
+              National College of Ireland. Its modern architecture and
+              eco-friendly design create an inspiring environment. Packed with
+              cutting-edge equipment, from advanced cardio machines to precision
+              weightlifting gear, it caters to diverse workout preferences.
+              Versatile spaces within the facility support group fitness
+              classes, yoga sessions, and wellness workshops. It's more than
+              just a gym; it's a community hub where students connect, share
+              goals, and motivate each other. The inclusive approach ensures
+              accessibility for users of all fitness levels. Join us on this
+              exciting fitness odyssey as NCI GYM opens the doors to a new era
+              of well-being. The new building is not just a gym; it's a
+              destination where health, community, and innovation converge to
+              create an unparalleled college fitness experience. Step inside and
+              let the journey to a healthier, stronger you begin!
+            </h6>
+            <button class="read-more-btn">Read More</button>
           </article>
-          <article class="news-card">
+          <article class="news-card" id="article5">
             <img
               loading="lazy"
               src="https://picsum.photos/600/600?random=1"
               alt="Random pictures using picsum.photos"
               data-text="Lorem dolorem optio"
-            >
+            />
             <h2>Car Park</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus nemo odit ab est, consequatur voluptate rem iusto.
-              Dolore explicabo, veniam quas esse quasi, veritatis in sed porro
-              amet vitae exercitationem.
+              Say goodbye to parking headaches as NCI Gym introduces its latest
+              enhancement – a brand-new, strategically located car park. 
             </p>
-            <a href="#">Read More</a>
+            <h6 class="hidden">
+              NCI Gym's new car park is not just about parking; it's an
+              extension of the fitness experience. Strategically placed for easy
+              access, it minimizes congestion, guaranteeing a smooth transition
+              from car to workout. The modern facility includes well-lit spaces,
+              designated areas for electric vehicles, and sustainable features,
+              reflecting NCI's commitment to both fitness and environmental
+              consciousness.
+            </h6>
+            <button class="read-more-btn">Read More</button>
           </article>
         </div>
       </section>
     </main>
+    <!-- News Modal  -->
+    <div
+      id="news-modal"
+      class="hidden fixed top-0 left-0 w-full h-full z-50 p-6 backdrop-blur-md"
+    >
+      <button id="close-modal-button" class="absolute top-7 right-7">
+        <img
+          src="./images/close-btn.svg"
+          alt="modal close button"
+          class="invert w-7"
+        />
+      </button>
+      <div class="p-6 w-full h-full flex flex-col dark">
+        <h1 id="modal-title" class="text-orange-400 text-2xl"></h1>
+        <div class="flex flex-col sm:flex-row flex-1 gap-6 my-3">
+          <img
+            id="modal-img"
+            alt="article image"
+            width="500px"
+            height="300px"
+            class="object-cover !h-[300px] !w-[500px] rounded ring-2 ring-orange-400"
+          />
+          <p
+            id="modal-body"
+            class="mb-3 text-gray-500 dark:text-gray-400 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:me-3 first-letter:float-start"
+          >
+            Track work across the enterprise through an open, collaborative
+            platform. Link issues across Jira and ingest data from other
+            software development tools, so your IT support and operations teams
+            have richer contextual information to rapidly respond to requests,
+            incidents, and changes.
+          </p>
+        </div>
+      </div>
+    </div>
     <footer class="home-footer">&copy; George Carp & Luis Martins 2023</footer>
     <script src="./script/main.js" defer></script>
     <script src="./script/index.js" defer></script>
