@@ -19,7 +19,7 @@
         playsinline
         autoplay
         id="myVideo"
-        class="w-full h-full absolute object-cover"
+        class="hidden md:block w-full h-full absolute object-cover"
         poster="./images/video-poster.jpg"
       >
         <source src="./videos/dumbbells-video.mp4" type="video/mp4" >
@@ -27,7 +27,7 @@
       </video>
       <img
         id="video-poster"
-        class="hidden w-full h-full absolute object-cover"
+        class="block md:hidden w-full h-full absolute object-cover"
         src="./images/video-poster.jpg"
         alt="header background dumbbells"
       >
@@ -42,7 +42,7 @@
       </ul>
        <!-- Responsive Burger Menu -->
        <div class="ml-auto md:hidden">
-        <button id="burger-icon" class="text-white focus:outline-none">
+        <button id="burger-icon" class="text-white focus:outline-none" aria-label="navbar burger button">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -196,6 +196,7 @@
             <img
               src="https://images.pexels.com/photos/260352/pexels-photo-260352.jpeg"
               alt="Picture with dumbels"
+              loading="lazy"
               data-text="Lorem impedit enim "
             >
             <h2>New Weights</h2>
@@ -209,6 +210,7 @@
           </article>
           <article class="news-card">
             <img
+              loading="lazy"
               src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Picture with weight bar in a room"
               data-text="Lorem recusandae
@@ -228,6 +230,7 @@
           </article>
           <article class="news-card">
             <img
+              loading="lazy"
               src="https://images.pexels.com/photos/931324/pexels-photo-931324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Picture with man using elevation circles"
               data-text="Lorem perferendis vitae recusandae"
@@ -243,6 +246,7 @@
           </article>
           <article class="news-card">
             <img
+              loading="lazy"
               src="./images/pexels-photo-10810460.jpg"
               alt=" Picture with gym building"
               data-text="Lorem dolorem optiot"
@@ -258,6 +262,7 @@
           </article>
           <article class="news-card">
             <img
+              loading="lazy"
               src="https://picsum.photos/600/600?random=1"
               alt="Random pictures using picsum.photos"
               data-text="Lorem dolorem optio"

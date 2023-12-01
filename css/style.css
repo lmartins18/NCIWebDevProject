@@ -236,13 +236,6 @@ main#subscription-main {
   transform: translateY(-10%);
 }
 
-/* TODO why is this repeated?*/
-.title {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-}
-
 .title {
   font-size: 1.3rem;
   font-weight: bold;
@@ -545,7 +538,7 @@ details ul li::before {
   content: "•";
   margin-right: 0.5rem;
 }
-
+ 
 @media (max-width: 760px) {
   table.upcoming-classes-table th,
   table.upcoming-classes-table td {
@@ -555,6 +548,15 @@ details ul li::before {
 
 @media (max-width: 600px) {
   
+  .card {
+    max-width: 100%;
+    margin: 10px;
+  }
+
+  .page-content {
+    flex-direction: column; 
+  }
+
   .NCI-GYM-container {
     padding-top: 10rem;
   }
@@ -739,18 +741,4 @@ details ul li::before {
   text-align: center;
 }
 
-.btn {
-  cursor: pointer;
-}
 
-/* Media query for smaller screens */
-@media screen and (max-width: 900px) {
-  .card {
-    max-width: 100%;
-    margin: 10px;
-  }
-
-  .page-content {
-    flex-direction: column; 
-  }
-}
