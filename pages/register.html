@@ -12,203 +12,144 @@
     <link rel="stylesheet" href="./../css/style.css" >
   </head>
   <body class="flex flex-col">
-    <nav
-    class="head-navigation w-full sticky top-0 flex align-items-center p-4 backdrop-blur-md z-50 text-white hover:no-underline"
-  >
-  <a href="./../index.html" class="site-logo font-bold text-3xl uppercase">NCI GYM</a>
-  <ul class="hidden md:block ml-auto uppercase [&>li]:inline-block [&>li]:font-bold [&>li]:mx-3">
-    <li><a href="#">Register</a></li>
-    <li><a href="./about.html">About</a></li>
-    <li><a href="./subscription.html">Subscription</a></li>
-  </ul>
-   <!-- Responsive Burger Menu -->
-   <div class="ml-auto md:hidden">
-    <button id="burger-icon" class="text-white focus:outline-none" aria-label="navbar burger button">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-    </button>
-</div>
-</nav>
-<!-- Mobile - Side Menu Overlay -->
-<div id="mobile-menu-overlay"
-    class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 hidden lg:hidden z-40">
-    <div class="flex justify-end p-4">
-        <button id="close-icon" class="text-white focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-        </button>
+    <!-- Navigation bar -->
+    <nav class="head-navigation w-full sticky top-0 flex align-items-center p-4 backdrop-blur-md z-50 text-white hover:no-underline">
+        <!-- Site logo and navigation links -->
+        <a href="./../index.html" class="site-logo font-bold text-3xl uppercase">NCI GYM</a>
+        <ul class="hidden md:block ml-auto uppercase [&>li]:inline-block [&>li]:font-bold [&>li]:mx-3">
+            <li><a href="#">Register</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./subscription.html">Subscription</a></li>
+        </ul>
+
+        <!-- Responsive Burger Menu -->
+        <div class="ml-auto md:hidden">
+            <button id="burger-icon" class="text-white focus:outline-none" aria-label="navbar burger button">
+                <!-- Burger icon SVG -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile - Side Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 hidden lg:hidden z-40">
+        <!-- Close icon button -->
+        <div class="flex justify-end p-4">
+            <button id="close-icon" class="text-white focus:outline-none">
+                <!-- Close icon SVG -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Side menu links -->
+        <ul class="text-white text-3xl font-bold m-6 flex flex-col gap-6">
+            <li><a href="#">Register</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./subscription.html">Subscription</a></li>
+        </ul>
     </div>
-    <ul class="text-white text-3xl font-bold m-6 flex flex-col gap-6">
-        <li><a href="#">Register</a></li>
-    <li><a href="./about.html">About</a></li>
-    <li><a href="./subscription.html">Subscription</a></li>
-    </ul>
-</div>
-    
+
+    <!-- Main content section for registration form -->
     <main class="flex-1 p-3 overflow-auto">
-      <form
-        id="registration-form"
-        class="max-w-md mx-auto my-8 p-6 bg-white rounded-md shadow-md my-auto h-100 overflow-auto"
-        onsubmit="validateForm()"
-      >
-        <h2 class="text-2xl font-semibold text-center mb-4">
-          Gym Registration
-        </h2>
-        <div class="grid grid-cols-2 gap-4">
-          <div class="mb-4">
-            <label
-              for="firstName"
-              class="block text-sm font-medium text-gray-600"
-              >First Name</label
-            >
-            <input
-              type="text"
-              id="firstName"
-              placeholder="Enter your first name"
-              class="mt-1 p-2 w-full border rounded-md"
-            >
-          </div>
+        <!-- Registration Form -->
+        <form id="registration-form"
+            class="max-w-md mx-auto my-8 p-6 bg-white rounded-md shadow-md my-auto h-100 overflow-auto"
+            onsubmit="validateForm()">
+            <h2 class="text-2xl font-semibold text-center mb-4">Gym Registration</h2>
 
-          <div class="mb-4">
-            <label
-              for="lastName"
-              class="block text-sm font-medium text-gray-600"
-              >Last Name</label
-            >
-            <input
-              type="text"
-              id="lastName"
-              placeholder="Enter your last name"
-              class="mt-1 p-2 w-full border rounded-md"
-            >
-          </div>
-        </div>
+            <!-- Grid layout for first and last name -->
+            <div class="grid grid-cols-2 gap-4">
+                <div class="mb-4">
+                    <label for="firstName" class="block text-sm font-medium text-gray-600">First Name</label>
+                    <input type="text" id="firstName" placeholder="Enter your first name"
+                        class="mt-1 p-2 w-full border rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="lastName" class="block text-sm font-medium text-gray-600">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Enter your last name"
+                        class="mt-1 p-2 w-full border rounded-md">
+                </div>
+            </div>
 
-        <div class="mb-4">
-          <label for="email" class="block text-sm font-medium text-gray-600"
-            >Email</label
-          >
-          <input
-            type="email"
-            id="email"
-            placeholder="Enter your email"
-            class="mt-1 p-2 w-full border rounded-md"
-          >
-        </div>
+            <!-- Email input -->
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-600">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" class="mt-1 p-2 w-full border rounded-md">
+            </div>
 
-        <div class="mb-4">
-          <label for="password" class="block text-sm font-medium text-gray-600"
-            >Password</label
-          >
-          <input
-            type="password"
-            id="password"
-            placeholder="Enter your password"
-            class="mt-1 p-2 w-full border rounded-md"
-          >
-        </div>
+            <!-- Password input -->
+            <div class="mb-4">
+                <label for="password" class="block text-sm font-medium text-gray-600">Password</label>
+                <input type="password" id="password" placeholder="Enter your password"
+                    class="mt-1 p-2 w-full border rounded-md">
+            </div>
 
-        <div class="mb-4">
-          <label
-            for="confirmPassword"
-            class="block text-sm font-medium text-gray-600"
-            >Confirm Password</label
-          >
-          <input
-            type="password"
-            id="confirmPassword"
-            placeholder="Confirm your password"
-            class="mt-1 p-2 w-full border rounded-md"
-          >
-        </div>
-        <ul
-          id="passwordErrorList"
-          class="list-disc list-outside mx-3 text-red-500 mb-3"
-        ></ul>
-        <div class="mb-4">
-          <label
-            for="phoneNumber"
-            class="block text-sm font-medium text-gray-600"
-            >Phone Number</label
-          >
-          <input
-            type="tel"
-            id="phoneNumber"
-            placeholder="Enter your phone number"
-            class="mt-1 p-2 w-full border rounded-md"
-          >
-        </div>
+            <!-- Confirm Password input -->
+            <div class="mb-4">
+                <label for="confirmPassword" class="block text-sm font-medium text-gray-600">Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm your password"
+                    class="mt-1 p-2 w-full border rounded-md">
+            </div>
 
-        <div class="mb-4">
-          <label for="dob" class="block text-sm font-medium text-gray-600"
-            >Date of Birth</label
-          >
-          <input
-            type="date"
-            id="dob"
-            class="mt-1 p-2 w-full border rounded-md"
-          >
-        </div>
+            <!-- Password error list -->
+            <ul id="passwordErrorList" class="list-disc list-outside mx-3 text-red-500 mb-3"></ul>
 
-        <div class="mb-4">
-          <label
-            for="membership"
-            class="block text-sm font-medium text-gray-600"
-            >Membership Option</label
-          >
-          <select id="membership" class="mt-1 p-2 w-full border rounded-md">
-            <option value="copper">Copper</option>
-            <option value="silver">Silver</option>
-            <option value="gold">Gold</option>
-            <option value="titanium">Titanium</option>
-          </select>
-        </div>
+            <!-- Phone Number input -->
+            <div class="mb-4">
+                <label for="phoneNumber" class="block text-sm font-medium text-gray-600">Phone Number</label>
+                <input type="tel" id="phoneNumber" placeholder="Enter your phone number"
+                    class="mt-1 p-2 w-full border rounded-md">
+            </div>
 
-        <div class="mb-4">
-          <div class="flex items-center">
-            <p class="hidden">Terms and Conditions</p>
-            <input type="checkbox" id="terms" class="form-checkbox" >
-            <label for="terms" class="ml-2 text-sm text-gray-600"
-              >I accept the terms and conditions</label
-            >
-          </div>
-        </div>
+            <!-- Date of Birth input -->
+            <div class="mb-4">
+                <label for="dob" class="block text-sm font-medium text-gray-600">Date of Birth</label>
+                <input type="date" id="dob" class="mt-1 p-2 w-full border rounded-md">
+            </div>
 
-        <button
-          type="submit"
-          class="w-full bg-orange-600 hover:bg-orange-700 text-white p-2 rounded-md"
-        >
-          Register
-        </button>
-        <div id="formMessage" class="mt-4 text-red-500"></div>
-        <ul
-          id="emptyFieldsList"
-          class="list-disc mx-3 text-red-500 list-outside [&>li]:cursor-pointer"
-        ></ul>
-      </form>
-      <!-- Success -->
-      <div id="success-screen" class="h-full w-full flex hidden">
-        <div
-          class="max-w-md mx-auto my-8 p-6 bg-white rounded-md shadow-md my-auto h-100 overflow-auto"
-        >
-          <h2 class="text-2xl font-semibold text-center mb-4">
-            Registration Successful!
-          </h2>
-          <p class="text-center mb-4">Thank you for registering with NCI GYM.</p>
-          <button
-            onclick="goToHomepage()"
-            class="w-full bg-blue-500 text-white p-2 rounded-md"
-          >
-            Go to Homepage
-          </button>
+            <!-- Membership Option dropdown -->
+            <div class="mb-4">
+                <label for="membership" class="block text-sm font-medium text-gray-600">Membership Option</label>
+                <select id="membership" class="mt-1 p-2 w-full border rounded-md">
+                    <option value="copper">Copper</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                    <option value="titanium">Titanium</option>
+                </select>
+            </div>
+
+            <!-- Terms and Conditions checkbox -->
+            <div class="mb-4">
+                <div class="flex items-center">
+                    <p class="hidden">Terms and Conditions</p>
+                    <input type="checkbox" id="terms" class="form-checkbox">
+                    <label for="terms" class="ml-2 text-sm text-gray-600">I accept the terms and conditions</label>
+                </div>
+            </div>
+
+            <!-- Register button -->
+            <button type="submit"
+                class="w-full bg-orange-600 hover:bg-orange-700 text-white p-2 rounded-md">Register</button>
+
+            <!-- Form validation error and empty field lists -->
+            <div id="formMessage" class="mt-4 text-red-500"></div>
+            <ul id="emptyFieldsList" class="list-disc mx-3 text-red-500 list-outside [&>li]:cursor-pointer"></ul>
+        </form>
+
+        <!-- Success screen -->
+        <div id="success-screen" class="h-full w-full flex hidden">
+            <div class="max-w-md mx-auto my-8 p-6 bg-white rounded-md shadow-md my-auto h-100 overflow-auto">
+                <h2 class="text-2xl font-semibold text-center mb-4">Registration Successful!</h2>
+                <p class="text-center mb-4">Thank you for registering with NCI GYM.</p>
+                <button onclick="goToHomepage()" class="w-full bg-orange-600 hover:bg-orange-700 text-white p-2 rounded-md">Go to
+                    Homepage</button>
+            </div>
         </div>
-      </div>
     </main>
     <script src="./../script/main.js"></script>
   </body>

@@ -9,119 +9,132 @@
     <script src="./../tailwind.config.js"></script>
     <link rel="stylesheet" href="./../css/style.css" >
   </head>
-  <body id="subscription-body" >
-     <nav
-        class="head-navigation w-full sticky top-0 flex align-items-center p-4 backdrop-blur-md z-50 text-white hover:no-underline"
-      >
-      <a href="./../index.html" class="site-logo font-bold text-3xl uppercase">NCI GYM</a>
-      <ul class="hidden md:block ml-auto uppercase [&>li]:inline-block [&>li]:font-bold [&>li]:mx-3">
-        <li><a href="./register.html">Register</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="#">Subscription</a></li>
-      </ul>
-       <!-- Responsive Burger Menu -->
-       <div class="ml-auto md:hidden">
-        <button id="burger-icon" class="text-white focus:outline-none" aria-label="navbar burger button">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-        </button>
-    </div>
+  <body id="subscription-body">
+    <!-- Navigation bar -->
+    <nav class="head-navigation w-full sticky top-0 flex align-items-center p-4 backdrop-blur-md z-50 text-white hover:no-underline">
+        <!-- Site logo and navigation links -->
+        <a href="./../index.html" class="site-logo font-bold text-3xl uppercase">NCI GYM</a>
+        <ul class="hidden md:block ml-auto uppercase [&>li]:inline-block [&>li]:font-bold [&>li]:mx-3">
+            <li><a href="./register.html">Register</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="#">Subscription</a></li>
+        </ul>
+
+        <!-- Responsive Burger Menu -->
+        <div class="ml-auto md:hidden">
+            <button id="burger-icon" class="text-white focus:outline-none" aria-label="navbar burger button">
+                <!-- Burger icon SVG -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
     </nav>
+
     <!-- Mobile - Side Menu Overlay -->
     <div id="mobile-menu-overlay"
         class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 hidden lg:hidden z-40">
+        <!-- Close icon button -->
         <div class="flex justify-end p-4">
             <button id="close-icon" class="text-white focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M6 18L18 6M6 6l12 12"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
         </div>
+
+        <!-- Side menu links -->
         <ul class="text-white text-3xl font-bold m-6 flex flex-col gap-6">
-          <li><a href="./register.html">Register</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="#">Subscription</a></li>
+            <li><a href="./register.html">Register</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="#">Subscription</a></li>
         </ul>
     </div>
+
+    <!-- Main content section for subscription details -->
     <main id="subscription-main" class="page-content flex justify-center items-center">
-      <div class="card mx-4">
-        <div class="card-inner">
-          <div class="card-front bg-gray">
-            <h2 class="title">Copper Membership</h2>
-            <p class="copy">1 Month</p>
-            <p>50 Euros</p>
-          </div>
-          <div class="card-back bg-gray">
-            <h2 class="title">Copper Membership Benefits</h2>
-            <ul>
-              <li>Unlimited access to gym facilities</li>
-              <li>Free fitness assessment</li>
-            </ul>
-          </div>
+        <!-- Membership cards -->
+        <div class="card mx-4">
+            <!-- Card inner with front and back faces -->
+            <div class="card-inner">
+                <!-- Front face of the card with membership details -->
+                <div class="card-front bg-gray">
+                    <h2 class="title">Copper Membership</h2>
+                    <p class="copy">1 Month</p>
+                    <p>50 Euros</p>
+                </div>
+                <!-- Back face of the card with membership benefits -->
+                <div class="card-back bg-gray">
+                    <h2 class="title">Copper Membership Benefits</h2>
+                    <ul>
+                        <li>Unlimited access to gym facilities</li>
+                        <li>Free fitness assessment</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="card mx-4">
-        <div class="card-inner">
-          <div class="card-front bg-gray">
-            <h2 class="title">Silver Membership</h2>
-            <p class="copy">1 Month</p>
-            <p>55 Euros</p>
-          </div>
-          <div class="card-back bg-gray">
-            <h2 class="title">Silver Membership Benefits</h2>
-            <ul>
-              <li>Access to group fitness classes</li>
-              <li>Discounts on personal training sessions</li>
-              <li>Complimentary towel service</li>
-            </ul>
-          </div>
+        <!-- Silver Membership Card -->
+        <div class="card mx-4">
+            <div class="card-inner">
+                <div class="card-front bg-gray">
+                    <h2 class="title">Silver Membership</h2>
+                    <p class="copy">1 Month</p>
+                    <p>55 Euros</p>
+                </div>
+                <div class="card-back bg-gray">
+                    <h2 class="title">Silver Membership Benefits</h2>
+                    <ul>
+                        <li>Access to group fitness classes</li>
+                        <li>Discounts on personal training sessions</li>
+                        <li>Complimentary towel service</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="card mx-4">
-        <div class="card-inner">
-          <div class="card-front bg-gray">
-            <h2 class="title">Gold Membership</h2>
-            <p class="copy">1 Month</p>
-            <p>60 Euros</p>
-          </div>
-          <div class="card-back bg-gray">
-            <h2 class="title">Gold Membership Benefits</h2>
-            <ul>
-              <li>Exclusive access to premium gym equipment</li>
-              <li>Free nutritional consultation</li>
-              <li>Unlimited tanning sessions</li>
-              <li>Priority class reservations</li>
-            </ul>
-          </div>
+        <!-- Gold Membership Card -->
+        <div class="card mx-4">
+            <div class="card-inner">
+                <div class="card-front bg-gray">
+                    <h2 class="title">Gold Membership</h2>
+                    <p class="copy">1 Month</p>
+                    <p>60 Euros</p>
+                </div>
+                <div class="card-back bg-gray">
+                    <h2 class="title">Gold Membership Benefits</h2>
+                    <ul>
+                        <li>Exclusive access to premium gym equipment</li>
+                        <li>Free nutritional consultation</li>
+                        <li>Unlimited tanning sessions</li>
+                        <li>Priority class reservations</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="card mx-4">
-        <div class="card-inner">
-          <div class="card-front bg-gray">
-            <h2 class="title">Titanium Membership</h2>
-            <p class="copy">1 Month</p>
-            <p>65 Euros</p>
-          </div>
-          <div class="card-back bg-gray">
-            <h2 class="title">Titanium Membership Benefits</h2>
-            <ul>
-              <li>Access to VIP lounge</li>
-              <li>Free massage sessions</li>
-              <li>Complimentary sports drinks</li>
-              <li>Discounts on gym merchandise</li>
-              <li>Personal locker with laundry service</li>
-            </ul>
-          </div>
+        <!-- Titanium Membership Card -->
+        <div class="card mx-4">
+            <div class="card-inner">
+                <div class="card-front bg-gray">
+                    <h2 class="title">Titanium Membership</h2>
+                    <p class="copy">1 Month</p>
+                    <p>65 Euros</p>
+                </div>
+                <div class="card-back bg-gray">
+                    <h2 class="title">Titanium Membership Benefits</h2>
+                    <ul>
+                        <li>Access to VIP lounge</li>
+                        <li>Free massage sessions</li>
+                        <li>Complimentary sports drinks</li>
+                        <li>Discounts on gym merchandise</li>
+                        <li>Personal locker with laundry service</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </main>
     <script src="./../script/main.js"></script>
   </body>
