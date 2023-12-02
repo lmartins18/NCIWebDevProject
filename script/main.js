@@ -18,3 +18,12 @@ burgerIcon && burgerIcon.addEventListener("click", toggleMobileMenu);
 
 // Event listener for the close icon to close the mobile menu
 closeIcon && closeIcon.addEventListener("click", closeMobileMenu);
+
+// Function to navigate to the homepage
+function goToHomepage() {
+  // Create a new <a> element
+  var link = document.createElement('a');
+  link.href = "./../index.html";
+  document.body.appendChild(link);
+  link.click();
+}

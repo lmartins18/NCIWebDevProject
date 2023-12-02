@@ -1,12 +1,3 @@
-// Function to navigate to the homepage
-function goToHomepage() {
-  // Create a new <a> element
-  var link = document.createElement('a');
-  link.href = "./../index.html";
-  document.body.appendChild(link);
-  link.click();
-}
-
 // Function to validate input fields (non-checkbox)
 function validateInput(field) {
   const input = document.getElementById(field);
